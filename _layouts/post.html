@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | Pilotech-VMI</title>
+  <meta name="description" content="{{ page.description | escape }}">
+  <link rel="canonical" href="{{ page.canonical_url | default: page.url | absolute_url }}">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{ page.title | escape }}">
+  <meta property="og:description" content="{{ page.description | escape }}">
+  <meta property="og:url" content="{{ page.canonical_url | default: page.url | absolute_url }}">
+  {% if page.featured_image %}<meta property="og:image" content="{{ page.featured_image | absolute_url }}">{% endif %}
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <script>tailwind.config={theme:{extend:{colors:{brand:{DEFAULT:'#57368C',dark:'#442a6d',light:'#f5f3f9'}},fontFamily:{serif:['Playfair Display','Georgia','serif'],sans:['Inter','system-ui','sans-serif']}}}}</script>
+  <style>
+    ::-webkit-scrollbar{display:none}
+    .post-content h2{font-family:'Playfair Display',Georgia,serif;font-size:1.75rem;line-height:1.25;font-weight:700;margin:2.7rem 0 1rem;color:#111827}
+    .post-content h3{font-size:1.25rem;font-weight:800;margin:2rem 0 .75rem;color:#111827}
+    .post-content p{font-size:15px;line-height:1.9;color:#4b5563;margin:1rem 0}
+    .post-content strong{color:#1f2937;font-weight:700}
+    .post-content a{color:#57368C;text-decoration:underline;text-underline-offset:3px;font-weight:600}
+    .post-content ul,.post-content ol{padding-left:1.5rem;margin:1rem 0 1.5rem;color:#4b5563}
+    .post-content ul{list-style:disc}.post-content ol{list-style:decimal}.post-content li{margin:.45rem 0;line-height:1.75}
+    .post-content blockquote{position:relative;background:#57368C;color:white;padding:2rem 2.25rem;border-radius:1rem;margin:2.25rem 0;overflow:hidden}
+    .post-content blockquote p{color:white;font-size:1.05rem;font-style:italic;margin:0;position:relative;z-index:1}
+    .post-content blockquote:before{content:'“';position:absolute;left:1rem;top:-1.2rem;font:700 7rem Georgia,serif;color:rgba(255,255,255,.13)}
+  </style>
+</head>
+<body class="bg-white font-sans text-gray-900 antialiased">
+<header class="sticky top-0 z-50 flex w-full shadow-sm bg-white" id="header">
+  <div class="hidden lg:flex w-64 items-center justify-center bg-white border-r border-gray-100">
+    <a class="text-2xl font-bold flex items-center space-x-2" href="/index.html"><i class="fa-solid fa-wind text-brand text-2xl"></i><span class="text-gray-900 tracking-tight">Pilotech<span class="text-brand font-extrabold">-VMI</span></span></a>
+  </div>
+  <div class="flex-1 flex flex-col border-l border-gray-100">
+    <div class="lg:flex px-8 py-2 text-xs font-medium text-gray-500 border-b border-gray-100 items-center justify-between hidden">
+      <div class="flex space-x-4 items-center"><a class="hover:text-brand transition" href="tel:0185441253"><i class="fa-solid fa-phone mr-2 text-gray-400"></i>01 85 44 12 53</a><span class="text-gray-300">|</span><a class="hover:text-brand transition" href="mailto:info@pilotech.eu"><i class="fa-solid fa-paper-plane mr-2 text-gray-400"></i>info@pilotech.eu</a><span class="text-gray-300">|</span><span><i class="fa-solid fa-star text-brand mr-2"></i>5/5 — 82 avis Google</span></div>
+    </div>
+    <div class="flex justify-between items-center px-4 lg:px-8 py-4 lg:py-3">
+      <a class="lg:hidden text-xl font-bold flex items-center space-x-2" href="/index.html"><i class="fa-solid fa-wind text-brand"></i><span>Pilotech<span class="text-brand font-extrabold">-VMI</span></span></a>
+      <nav class="hidden lg:flex items-center space-x-8 font-semibold text-gray-700 text-sm"><a class="hover:text-brand" href="/index.html">Accueil</a><a class="hover:text-brand" href="/a-propos.html">À propos</a><a class="hover:text-brand" href="/gammes.html">Gammes VMI</a><a class="text-brand border-b-2 border-brand pb-1" href="/blog/">Blog</a><a class="hover:text-brand" href="/index.html#realisations">Réalisations</a><a class="hover:text-brand" href="/index.html#temoignages">Témoignages</a><a class="hover:text-brand" href="/index.html#contact">Contact</a></nav>
+      <div class="flex items-center space-x-4 lg:hidden"><a class="px-4 py-2 bg-brand text-white font-semibold rounded text-sm" href="/index.html#contact">Devis</a><button aria-label="Ouvrir le menu" class="text-gray-600 text-2xl" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"><i class="fa-solid fa-bars"></i></button></div>
+    </div>
+    <div class="hidden lg:hidden px-4 pb-4 flex-col space-y-3 font-semibold text-gray-700 text-sm border-t border-gray-100 pt-4" id="mobile-menu"><a href="/index.html">Accueil</a><a href="/a-propos.html">À propos</a><a href="/gammes.html">Gammes VMI</a><a class="text-brand" href="/blog/">Blog</a><a href="/index.html#contact">Contact</a></div>
+  </div>
+  <div class="hidden lg:flex w-64 bg-gray-950 items-center justify-center"><a class="inline-flex items-center px-6 py-2.5 bg-brand hover:bg-brand-dark text-white font-semibold rounded" href="/index.html#contact"><i class="fa-solid fa-file-invoice mr-2"></i>Devis Gratuit</a></div>
+</header>
+<section class="bg-white pt-16 pb-12 text-center px-4 border-b border-gray-100">
+  <div class="container mx-auto max-w-4xl">
+    <div class="flex items-center justify-center space-x-3 text-xs font-medium mb-6"><span class="border border-brand/20 bg-brand/5 text-brand px-3 py-1 rounded-full font-semibold">{{ page.category | default: 'Conseils VMC' }}</span><span class="text-gray-400"><i class="fa-regular fa-calendar mr-1"></i>{{ page.date | date: "%d/%m/%Y" }}</span></div>
+    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">{{ page.title }}</h1>
+  </div>
+</section>
+{% if page.featured_image %}<section class="bg-white"><div class="w-full"><img alt="{{ page.image_alt | default: page.title | escape }}" class="w-full h-auto max-h-[600px] object-cover" src="{{ page.featured_image }}"></div>
+<div class="container mx-auto max-w-4xl px-4 py-6 border-b border-gray-100 flex flex-col sm:flex-row justify-between items-center bg-white"><div class="flex items-center mb-4 sm:mb-0"><div class="w-12 h-12 rounded-full mr-4 bg-brand/10 text-brand flex items-center justify-center"><i class="fa-solid fa-wind"></i></div><div><h4 class="font-bold text-gray-900">{{ page.author | default: 'Pilotech-VMI' }}</h4><p class="text-xs text-gray-500">Expert ventilation en Île-de-France</p></div></div><div class="flex items-center space-x-6 text-sm font-medium text-gray-400"><span><i class="fa-regular fa-clock mr-1 text-brand"></i>{{ content | number_of_words | divided_by: 220 | plus: 1 }} min de lecture</span><span class="text-gray-200">|</span><span><i class="fa-regular fa-calendar mr-1 text-brand"></i>{{ page.date | date: "%d/%m/%Y" }}</span></div></div></section>{% endif %}
+<section class="py-16 bg-gray-50"><article class="post-content container mx-auto max-w-3xl px-4">{{ content }}</article></section>
+<section class="py-20 bg-white"><div class="container mx-auto px-4 lg:px-8 max-w-5xl"><div class="flex justify-between items-end mb-10"><div><div class="inline-flex items-center space-x-2 text-brand font-semibold text-xs uppercase tracking-wider mb-3"><span class="w-2 h-2 rounded-full bg-brand"></span><span>Nos conseils</span></div><h2 class="font-serif text-3xl font-bold text-gray-900">Articles associés</h2></div><a class="px-6 py-2.5 bg-brand hover:bg-brand-dark text-white font-semibold rounded-lg text-sm" href="/blog/">Tous les articles</a></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">{% assign related = site.posts | where_exp: "post", "post.url != page.url" %}{% for post in related limit:2 %}<article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group p-2"><a href="{{ post.url }}">{% if post.featured_image %}<div class="h-64 rounded-xl overflow-hidden bg-gray-100"><img alt="{{ post.image_alt | default: post.title | escape }}" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" src="{{ post.featured_image }}"></div>{% endif %}<div class="p-6"><p class="text-xs uppercase tracking-wider text-brand font-semibold">{{ post.category }}</p><h3 class="font-serif text-xl font-bold mt-2 text-gray-900">{{ post.title }}</h3><p class="text-sm text-gray-500 mt-3">{{ post.description | truncate: 150 }}</p></div></a></article>{% endfor %}</div></div></section>
+<footer class="bg-gray-950 text-white pt-14 pb-8"><div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-10"><div><div class="text-2xl font-bold mb-4"><i class="fa-solid fa-wind text-brand mr-2"></i>Pilotech<span class="text-brand">-VMI</span></div><p class="text-gray-400 text-sm leading-relaxed">Installation de solutions de ventilation par insufflation en Île-de-France.</p></div><div><h3 class="font-bold mb-4">Navigation</h3><div class="flex flex-col gap-2 text-sm text-gray-400"><a href="/gammes.html">Nos gammes VMI</a><a href="/blog/">Conseils et actualités</a><a href="/a-propos.html">À propos</a></div></div><div><h3 class="font-bold mb-4">Contact</h3><p class="text-sm text-gray-400">01 85 44 12 53<br>info@pilotech.eu</p></div></div><div class="max-w-6xl mx-auto px-4 mt-10 pt-6 border-t border-white/10 text-xs text-gray-500">© {{ site.time | date: "%Y" }} Pilotech-VMI</div></footer>
+</body></html>
