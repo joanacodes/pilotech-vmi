@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="fr">
+<head>
+<script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest' };</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cube - Pilotech-VMI</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            brand: { DEFAULT: '#57368C', dark: '#442a6d', light: '#f5f3f9' }
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    ::-webkit-scrollbar { display: none; }
+    .hero-bg {
+      background-image: linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.72)), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2075&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    #temoignages-marquee {
+      display: flex;
+      width: max-content;
+      animation: temoignages-scroll 36s linear infinite;
+    }
+    @keyframes temoignages-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .temoignages-fade-left { background: linear-gradient(to right, #f9fafb, transparent); }
+    .temoignages-fade-right { background: linear-gradient(to left, #f9fafb, transparent); }
+  </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex w-full shadow-sm bg-white" id="header">
+<div class="hidden lg:flex w-64 items-center justify-center bg-white border-r border-gray-100">
+<a class="text-2xl font-bold flex items-center space-x-2" href="index.html">
+<i class="fa-solid fa-wind text-brand text-2xl"></i>
+<span class="text-gray-900 tracking-tight">Pilotech<span class="text-brand font-extrabold">-VMI</span></span>
+</a>
+</div>
+<div class="flex-1 flex flex-col border-l border-gray-100">
+<div class="lg:flex px-8 py-2 text-xs font-medium text-gray-500 border-b border-gray-100 items-center flex flex-row justify-between hidden">
+<div class="flex space-x-4 mr-6 justify-between items-center">
+<a class="hover:text-brand transition flex items-center" href="tel:0185441253">
+<i class="fa-solid fa-phone mr-2 text-gray-400"></i> 01 85 44 12 53
+          </a>
+<span class="text-gray-300">|</span>
+<a class="hover:text-brand transition flex items-center" href="mailto:info@pilotech.eu">
+<i class="fa-solid fa-paper-plane mr-2 text-gray-400"></i> info@pilotech.eu
+          </a>
+<span class="text-gray-300">|</span>
+<span class="flex items-center">
+<i class="fa-solid fa-star text-brand mr-2"></i> 5/5 — 82 avis Google
+          </span>
+</div>
+<div class="flex items-center space-x-4 pl-4 border-l border-gray-100 text-sm">
+<a class="hover:text-brand transition text-gray-700" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+<a class="hover:text-brand transition text-gray-700" href="#"><i class="fa-brands fa-instagram"></i></a>
+<a class="hover:text-brand transition text-gray-700" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+</div>
+</div>
+<div class="flex justify-between items-center px-4 lg:px-8 py-4 lg:py-3">
+<a class="lg:hidden text-xl font-bold flex items-center space-x-2" href="index.html">
+<i class="fa-solid fa-wind text-brand"></i>
+<span class="text-gray-900 tracking-tight">Pilotech<span class="text-brand font-extrabold">-VMI</span></span>
+</a>
+<nav class="hidden lg:flex items-center space-x-8 font-semibold text-gray-700 text-sm">
+<a class="hover:text-brand transition pb-1" href="index.html">Accueil</a>
+<a class="hover:text-brand transition pb-1" href="a-propos.html">À propos</a>
+<a class="text-brand border-b-2 border-brand pb-1" href="gammes.html">Gammes VMI</a>
+<a class="hover:text-brand transition pb-1" href="index.html#realisations">Réalisations</a>
+<a class="hover:text-brand transition pb-1" href="index.html#temoignages">Témoignages</a>
+<a class="hover:text-brand transition pb-1" href="#contact-section">Contact</a>
+</nav>
+<div class="flex items-center space-x-4 lg:hidden">
+<a class="px-4 py-2 bg-brand text-white font-semibold rounded text-sm" href="#contact-section">Devis</a>
+<button class="text-gray-600 text-2xl focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"><i class="fa-solid fa-bars"></i></button>
+</div>
+</div>
+<div class="hidden lg:hidden px-4 pb-4 flex flex-col space-y-3 font-semibold text-gray-700 text-sm border-t border-gray-100 pt-4" id="mobile-menu">
+<a class="hover:text-brand transition" href="index.html">Accueil</a><a class="hover:text-brand transition" href="a-propos.html">À propos</a><a class="hover:text-brand transition" href="gammes.html">Gammes VMI</a><a class="hover:text-brand transition" href="index.html#realisations">Réalisations</a><a class="hover:text-brand transition" href="index.html#temoignages">Témoignages</a><a class="hover:text-brand transition" href="#contact-section">Contact</a>
+</div>
+</div>
+<div class="hidden lg:flex w-64 bg-gray-950 items-center justify-center">
+<a class="inline-flex items-center justify-center px-6 py-2.5 bg-brand hover:bg-brand-dark text-white font-semibold rounded transition duration-300" href="#contact-section">
+<i class="fa-solid fa-file-invoice mr-2"></i> Devis Gratuit
+      </a>
+</div>
+</header>
+<!-- Section 1: Product Introduction — CUBE -->
+<section class="py-20 md:py-24 bg-white px-6 lg:px-8" id="about">
+<div class="container mx-auto px-4 lg:px-8 mb-11">
+<div class="flex flex-col lg:flex-row items-center gap-12">
+<div class="lg:w-1/2">
+<div class="relative h-[400px] w-full rounded-2xl overflow-hidden shadow-lg">
+<div class="absolute inset-0 bg-brand/10 z-10"></div>
+<div class="h-full overflow-hidden">
+<img alt="Cube" class="w-full h-full object-cover" src="images/cube.png"/>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2">
+<div class="inline-flex items-center space-x-2 text-brand font-semibold text-xs tracking-wider uppercase mb-4">
+<span class="w-2 h-2 rounded-full bg-brand"></span>
+<span>PILOTECH-VMI — VENTILATION RÉSIDENTIELLE</span>
+</div>
+<h2 class="text-4xl lg:text-5xl font-bold mb-4 text-brand leading-tight">
+            Cube : la VMC par insufflation compacte pour petits logements
+          </h2>
+<h3 class="text-2xl lg:text-3xl font-semibold mb-5 text-gray-800 leading-snug">
+            Contrôlez l'humidité de votre appartement ou maison rénovée en toute autonomie, sans travaux lourds
+          </h3>
+<p class="text-gray-600 mb-7 leading-relaxed text-base">
+            Le Cube by Pilotech-VMI est la VMC par insufflation pensée pour les petits espaces et les logements rénovés sans combles. Ultra-compact, silencieux et 100 % autonome, il régule en continu le taux d'hygrométrie, élimine condensation et moisissures, et améliore la qualité de l'air — le tout grâce à ses grilles élégantes qui s'intègrent parfaitement à votre intérieur, sans gêner la décoration.
+          </p>
+<div class="flex flex-wrap items-center gap-4">
+<div class="flex flex-col">
+<span class="font-bold text-xl text-brand">5.0</span>
+<div class="flex text-yellow-400 text-xs">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<span class="text-xs text-brand">82 avis Google</span>
+</div>
+<a class="px-6 py-3 bg-brand hover:bg-brand-dark text-white font-semibold rounded-md transition duration-300" href="#contact-section">Nous contacter</a>
+<a class="px-6 py-3 border border-brand text-brand hover:bg-brand hover:text-white font-semibold rounded-md transition duration-300" href="#">Télécharger la brochure</a>
+</div>
+</div>
+</div>
+</div>
+<div class="container mx-auto px-4 lg:px-8 border-t border-dashed border-gray-200 pt-8 mt-4">
+<p class="text-gray-700 text-lg leading-relaxed">
+<span class="text-brand font-semibold">Le Cube</span> est la VMC par insufflation conçue pour les appartements, studios et maisons rénovées d'Île-de-France — ces logements compacts où l'humidité s'accumule faute de ventilation efficace, favorisant moisissures, condensation et dégradation de la qualité de l'air intérieur. Entièrement autonome, il s'adapte en temps réel aux conditions de votre logement et ventile en silence, 24h/24, sans aucune intervention de votre part. Pilotech-VMI conçoit, installe et entretient votre Cube partout en Île-de-France pour un air sain et un habitat préservé, durablement.
+      </p>
+</div>
+</section>
+<!-- Section 2: Compactness & Autonomous Operation (Purple BG) -->
+<section class="py-20 md:py-24 bg-brand" id="about-2">
+<div class="container mx-auto px-4 lg:px-8">
+<div class="flex flex-col lg:flex-row items-center gap-12">
+<div class="lg:w-1/2">
+<div class="inline-flex items-center space-x-2 text-white font-semibold text-xs tracking-wider uppercase mb-4">
+<span class="w-2 h-2 rounded-full bg-white"></span>
+<span>PILOTECH VMI</span>
+</div>
+<h2 class="text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+            La compacité au service de votre confort
+          </h2>
+<p class="text-white/80 leading-relaxed text-xl">
+            Le Cube tient dans un espace minimal grâce à son design ultra-plat de 22 cm d'épaisseur, ses grilles élégantes s'intègrent discrètement dans n'importe quelle pièce — couloir, chambre, salon — sans percer les murs porteurs ni déposer un seul meuble. Son boîtier robuste est conçu pour une installation intérieure rapide, réalisée en une demi-journée par nos techniciens Île-de-France. Une fois en place, le Cube travaille en silence absolu, ajuste automatiquement son débit selon le taux d'humidité détecté, et vous libère de toute contrainte d'entretien au quotidien.
+          </p>
+</div>
+<div class="lg:w-1/2">
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white/10 rounded-xl p-5 flex items-start gap-3">
+<i class="fa-solid fa-ruler-combined text-yellow-300 text-xl mt-0.5"></i>
+<div>
+<div class="text-white font-bold text-lg">22 cm</div>
+<div class="text-white/70 text-sm">d'épaisseur seulement</div>
+</div>
+</div>
+<div class="bg-white/10 rounded-xl p-5 flex items-start gap-3">
+<i class="fa-solid fa-shield-halved text-yellow-300 text-xl mt-0.5"></i>
+<div>
+<div class="text-white font-bold text-lg">5 ans</div>
+<div class="text-white/70 text-sm">de garantie constructeur</div>
+</div>
+</div>
+<div class="bg-white/10 rounded-xl p-5 flex items-start gap-3">
+<i class="fa-solid fa-volume-xmark text-yellow-300 text-xl mt-0.5"></i>
+<div>
+<div class="text-white font-bold text-lg">Silencieux</div>
+<div class="text-white/70 text-sm">fonctionnement discret 24h/24</div>
+</div>
+</div>
+<div class="bg-white/10 rounded-xl p-5 flex items-start gap-3">
+<i class="fa-solid fa-flag text-yellow-300 text-xl mt-0.5"></i>
+<div>
+<div class="text-white font-bold text-lg">Fabriqué</div>
+<div class="text-white/70 text-sm">100 % en France</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Why Indoor Humidity Is a Problem (Light BG) -->
+<section class="relative py-20 lg:py-28 bg-gray-50 px-6 lg:px-16" id="hero">
+<div class="max-w-5xl mx-auto">
+<div class="inline-flex items-center space-x-2 text-brand font-semibold text-xs tracking-wider uppercase mb-6">
+<span class="w-2 h-2 rounded-full bg-brand"></span>
+<span>ENJEUX SANTÉ &amp; HABITAT</span>
+</div>
+<h1 class="text-4xl lg:text-5xl font-bold leading-tight mb-8 text-gray-900">
+        Pourquoi l'humidité dans votre logement est un problème que vous ne pouvez plus ignorer ?
+      </h1>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+<div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+<div class="w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center mb-4">
+<i class="fa-solid fa-house-crack text-brand text-xl"></i>
+</div>
+<div class="text-3xl font-bold text-brand mb-1">8×</div>
+<p class="text-gray-600 text-sm leading-relaxed">plus pollué : l'air intérieur d'un logement mal ventilé comparé à l'air extérieur — moisissures, COV et humidité excessive en sont les principales causes</p>
+</div>
+<div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+<div class="w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center mb-4">
+<i class="fa-solid fa-lungs-virus text-brand text-xl"></i>
+</div>
+<div class="text-3xl font-bold text-brand mb-1">80 %</div>
+<p class="text-gray-600 text-sm leading-relaxed">du temps passé en espace clos : la qualité de l'air intérieur impacte directement la santé, le sommeil et la concentration des habitants</p>
+</div>
+<div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+<div class="w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center mb-4">
+<i class="fa-solid fa-triangle-exclamation text-brand text-xl"></i>
+</div>
+<div class="text-3xl font-bold text-brand mb-1">−15 %</div>
+<p class="text-gray-600 text-sm leading-relaxed">de valeur estimée perdue sur un bien immobilier affecté par des problèmes d'humidité, moisissures et mauvaise ventilation non traités</p>
+</div>
+</div>
+<p class="text-gray-700 text-lg leading-relaxed max-w-4xl">
+        Dans les petits appartements et logements rénovés, l'humidité s'accumule naturellement : douches, cuisine, respiration — chaque activité du quotidien génère de la vapeur d'eau. Sans ventilation adaptée, cette humidité se condense sur les murs, nourrit les moisissures et dégrade lentement votre logement. Ouvrir les fenêtres ne suffit plus : c'est une fausse solution face à un véritable enjeu de salubrité. Avec le Cube by Pilotech-VMI, vous agissez à la source : une ventilation continue, silencieuse et entièrement autonome qui maintient un taux d'hygrométrie optimal 24h/24, quelle que soit la saison — sans aucun geste de votre part.
+      </p>
+</div>
+</section>
+<!-- Section 4: Features & Advantages (Dark BG) -->
+<section class="py-20 md:py-24 bg-gray-900" id="about-2-2">
+<div class="container mx-auto px-4 lg:px-8">
+<div class="flex flex-col lg:flex-row items-start gap-12">
+<div class="lg:w-1/2">
+<div class="inline-flex items-center space-x-2 text-brand font-semibold text-xs tracking-wider uppercase mb-4">
+<span class="w-2 h-2 rounded-full bg-brand"></span>
+<span class="text-gray-300">CARACTÉRISTIQUES TECHNIQUES</span>
+</div>
+<h2 class="text-3xl lg:text-4xl font-bold text-white mb-8 leading-snug">
+            Caractéristiques &amp; avantages du Cube
+          </h2>
+<ul class="space-y-5 mb-8 text-lg">
+<li class="flex items-start text-gray-300">
+<i class="fa-solid fa-check text-brand mr-3 mt-1 shrink-0"></i>
+<span>Régulation hygrométrique automatique : le Cube détecte en temps réel le taux d'humidité de votre logement et ajuste son débit de ventilation pour maintenir un environnement sain en permanence, sans aucune intervention manuelle.</span>
+</li>
+<li class="flex items-start text-gray-300">
+<i class="fa-solid fa-check text-brand mr-3 mt-1 shrink-0"></i>
+<span>Technologie Plasma Ionizer intégrée pour purifier l'air entrant, neutraliser les bactéries, allergènes et polluants domestiques — un air intérieur plus sain à chaque instant pour vous et votre famille.</span>
+</li>
+<li class="flex items-start text-gray-300">
+<i class="fa-solid fa-check text-brand mr-3 mt-1 shrink-0"></i>
+<span>Design ultra-plat de seulement 22 cm d'épaisseur avec grilles élégantes : le Cube s'intègre discrètement dans n'importe quelle pièce de votre logement sans perturber votre décoration intérieure.</span>
+</li>
+<li class="flex items-start text-gray-300">
+<i class="fa-solid fa-check text-brand mr-3 mt-1 shrink-0"></i>
+<span>Connectivité WiFi intégrée et compatibilité application VMI+ : pilotez, surveillez et ajustez votre Cube depuis votre smartphone, où que vous soyez, en temps réel.</span>
+</li>
+<li class="flex items-start text-gray-300">
+<i class="fa-solid fa-check text-brand mr-3 mt-1 shrink-0"></i>
+<span>Très faible consommation électrique et fonctionnement 100 % silencieux grâce à ses pieds anti-vibration — un confort permanent, jour et nuit, sans impact notable sur votre facture d'énergie.</span>
+</li>
+</ul>
+<div class="flex flex-wrap items-center gap-4">
+<a class="px-6 py-3 bg-white hover:bg-gray-100 text-gray-900 font-semibold rounded-md transition duration-300" href="#contact-section">Nous contacter</a>
+<a class="px-6 py-3 border border-white/30 hover:border-white text-white font-semibold rounded-md transition duration-300" href="#">Télécharger la brochure</a>
+<div class="flex flex-col ml-2">
+<span class="font-bold text-xl text-white">5.0</span>
+<div class="flex text-yellow-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<span class="text-gray-400 text-sm">82 avis Google</span>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2">
+<div class="inline-flex items-center space-x-2 text-brand font-semibold text-xs tracking-wider uppercase mb-4">
+<span class="w-2 h-2 rounded-full bg-brand"></span>
+<span class="text-gray-300">MODES &amp; GARANTIES</span>
+</div>
+<ul class="space-y-5 mb-8 text-lg mt-8">
+<li class="flex items-start text-gray-300">
+<i class="fa-solid fa-check text-brand mr-3 mt-1 shrink-0"></i>
+<span>Mode Boost pour une déshumidification accélérée lors des pics d'humidité ponctuels — après une douche, en cuisine ou lors de périodes de forte condensation hivernale.</span>
+</li>
+<li class="flex items-start text-gray-300">
+<i class="fa-solid fa-check text-brand mr-3 mt-1 shrink-0"></i>
+<span>Mode Vacances pour maintenir une ventilation minimale et protéger votre logement de l'humidité lors de vos absences prolongées, sans laisser l'humidité reprendre le dessus.</span>
+</li>
+<li class="flex items-start text-gray-300">
+<i class="fa-solid fa-check text-brand mr-3 mt-1 shrink-0"></i>
+<span>Affichage en temps réel de l'encrassement du filtre via l'application VMI+ pour un entretien simple, anticipé et planifié — sans mauvaise surprise ni panne imprévue.</span>
+</li>
+<li class="flex items-start text-gray-300">
+<i class="fa-solid fa-check text-brand mr-3 mt-1 shrink-0"></i>
+<span>Multiples positions et configurations d'installation pour s'adapter à tous les types de logements : appartement, studio, maison rénovée, avec ou sans faux-plafond.</span>
+</li>
+<li class="flex items-start text-gray-300">
+<i class="fa-solid fa-check text-brand mr-3 mt-1 shrink-0"></i>
+<span><strong class="text-white">Garantie 5 ans et produit 100 % français</strong> — conçu, assemblé et certifié en France par Pilotech-VMI pour une durabilité, une fiabilité et une performance maximales sur le long terme.</span>
+</li>
+</ul>
+<div class="bg-white/5 border border-white/10 rounded-2xl p-6 mt-4">
+<div class="flex items-center gap-3 mb-3">
+<i class="fa-solid fa-map-location-dot text-brand text-xl"></i>
+<span class="text-white font-semibold text-base">Zone d'intervention : Île-de-France</span>
+</div>
+<p class="text-gray-400 text-sm leading-relaxed">Paris, Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne, Essonne, Yvelines, Val-d'Oise, Seine-et-Marne — nos techniciens se déplacent chez vous pour étudier votre projet sans engagement.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Long-form Editorial (Hero BG) -->
+<section class="relative py-20 lg:py-32 hero-bg px-6 lg:px-16" id="hero-2">
+<div class="max-w-5xl mx-auto">
+<div class="inline-flex items-center space-x-2 text-white/80 font-semibold text-xs tracking-wider uppercase mb-6">
+<span class="w-2 h-2 rounded-full bg-white/60"></span>
+<span>VOTRE LOGEMENT, NOTRE EXPERTISE</span>
+</div>
+<h1 class="text-4xl lg:text-5xl font-bold leading-tight mb-8 text-white">
+        Le Cube : la VMC par insufflation compacte et autonome pour un logement sain en Île-de-France
+      </h1>
+<div class="text-white/85 text-lg leading-relaxed space-y-5 max-w-4xl">
+<p>
+          Dans les petits appartements, studios et maisons rénovées d'Île-de-France, l'humidité intérieure est l'ennemi invisible du confort et de la santé. Chaque activité du quotidien — douche, cuisine, simple respiration — génère de la vapeur d'eau qui, faute de ventilation adaptée, se condense sur les murs froids, les joints de fenêtres et les angles des pièces. Résultat : moisissures, taches noires, odeurs persistantes et dégradation progressive de votre logement. Et votre santé en prend également un coup : l'air intérieur chargé en humidité est un terrain fertile pour les acariens, les spores et les composés organiques volatils qui aggravent allergies et troubles respiratoires.
+        </p>
+<p>
+          Ouvrir les fenêtres ne suffit pas. En Île-de-France, l'air extérieur chargé de pollution urbaine et les variations thermiques importantes entre saisons rendent cette approche inefficace et contre-productive. C'est là qu'intervient le <strong class="text-white">Cube by Pilotech-VMI</strong> : une VMC par insufflation spécialement conçue pour les logements compacts sans combles, qui insuffle en continu de l'air filtré et purifié par sa technologie Plasma Ionizer, chasse l'air vicié et humide via les grilles élégantes installées dans vos pièces, et maintient un taux d'hygrométrie optimal 24h/24 — le tout en silence absolu et de façon entièrement autonome, piloté depuis votre smartphone via l'application VMI+.
+        </p>
+<p>
+          Spécialiste de la ventilation résidentielle, Pilotech-VMI accompagne les propriétaires et locataires de Paris et de toute l'Île-de-France dans le diagnostic, l'installation et la maintenance de leur solution Cube. Nos techniciens réalisent une étude précise de votre logement, dimensionnent l'équipement selon vos contraintes réelles et assurent une mise en service rapide ainsi qu'un suivi d'entretien régulier pour une efficacité durable. Adoptez le Cube avec Pilotech-VMI : protégez votre habitat, préservez la santé de vos proches et éliminez définitivement l'humidité de votre logement. Contactez-nous dès aujourd'hui pour obtenir un devis personnalisé pour l'installation de votre Cube.
+        </p>
+</div>
+<div class="mt-10 flex flex-col sm:flex-row gap-4">
+<a class="inline-flex items-center justify-center px-8 py-4 bg-brand hover:bg-brand-dark text-white font-bold rounded-lg transition duration-300 text-base" href="#contact-section">
+<i class="fa-solid fa-file-invoice mr-2"></i> Obtenir un devis gratuit
+        </a>
+<a class="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold rounded-lg transition duration-300 text-base" href="tel:0185441253">
+<i class="fa-solid fa-phone mr-2"></i> 01 85 44 12 53
+        </a>
+</div>
+</div>
+</section>
+<!-- Methodology Section -->
+<section class="py-20 md:py-32 bg-white" id="methodology">
+<div class="container mx-auto px-4 lg:px-8">
+<div class="flex flex-col lg:flex-row gap-16 items-center">
+<div class="lg:w-1/2">
+<div class="inline-flex items-center space-x-2 text-brand font-semibold text-xs tracking-wider uppercase mb-4">
+<span class="w-2 h-2 rounded-full bg-brand"></span><span>NOTRE MÉTHODE</span>
+</div>
+<h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Un Processus Simple et Efficace</h2>
+<p class="text-gray-600 mb-8 leading-relaxed">De la demande de devis à l'installation finale, nous vous accompagnons à chaque étape avec professionnalisme et transparence.</p>
+<a class="inline-block px-6 py-3 bg-brand hover:bg-brand-dark text-white font-semibold rounded-md transition duration-300 mb-10" href="#realisations">Voir Nos Réalisations</a>
+<div class="h-80 overflow-hidden rounded-xl shadow-lg relative">
+<div class="absolute inset-0 bg-brand/10 z-10 mix-blend-multiply"></div>
+<img alt="professional HVAC technician inspecting commercial equipment, industrial setting, bright lighting" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+</div>
+</div>
+<div class="lg:w-1/2 relative">
+<div class="hidden md:block absolute left-6 top-10 bottom-10 w-0.5 bg-gray-100"></div>
+<div class="space-y-10 relative">
+<div class="flex items-start">
+<div class="w-12 h-12 rounded-full bg-brand-light border-2 border-white shadow-sm flex items-center justify-center text-brand font-bold text-lg mr-6 shrink-0 relative z-10">01</div>
+<div class="pt-2">
+<h4 class="text-xl font-bold text-gray-900 mb-2">Demande de Devis</h4>
+<p class="text-gray-600 text-sm leading-relaxed">Contactez-nous par téléphone ou via notre formulaire en ligne pour discuter de votre projet de ventilation et de la configuration de votre logement.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 rounded-full bg-white border-2 border-gray-100 flex items-center justify-center text-gray-400 font-bold text-lg mr-6 shrink-0 relative z-10 transition hover:border-brand hover:text-brand">02</div>
+<div class="pt-2">
+<h4 class="text-xl font-bold text-gray-900 mb-2">Étude Personnalisée</h4>
+<p class="text-gray-600 text-sm leading-relaxed">Notre équipe évalue votre logement, analyse vos besoins en ventilation et vous propose la solution Cube la plus adaptée à votre configuration et vos contraintes.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 rounded-full bg-white border-2 border-gray-100 flex items-center justify-center text-gray-400 font-bold text-lg mr-6 shrink-0 relative z-10 transition hover:border-brand hover:text-brand">03</div>
+<div class="pt-2">
+<h4 class="text-xl font-bold text-gray-900 mb-2">Installation Rapide</h4>
+<p class="text-gray-600 text-sm leading-relaxed">Intervention soignée et efficace en une demi-journée par nos techniciens qualifiés — sans gros œuvre, sans travaux lourds, avec une intégration discrète dans votre intérieur.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 rounded-full bg-white border-2 border-gray-100 flex items-center justify-center text-gray-400 font-bold text-lg mr-6 shrink-0 relative z-10 transition hover:border-brand hover:text-brand">04</div>
+<div class="pt-2">
+<h4 class="text-xl font-bold text-gray-900 mb-2">Suivi et Garantie 5 ans</h4>
+<p class="text-gray-600 text-sm leading-relaxed">Service après-vente réactif et garantie constructeur 5 ans pour assurer la longévité et l'efficacité permanente de votre Cube dans la durée.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Products Grid Section -->
+<section class="py-20 bg-gray-50" id="gammes">
+<div class="container mx-auto px-4 lg:px-8">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<div class="inline-flex items-center justify-center space-x-2 text-brand font-semibold text-xs tracking-wider uppercase mb-4">
+<span class="w-2 h-2 rounded-full bg-brand"></span>
+<p class="text-sm">NOS VMC PAR INSUFFLATION</p>
+</div>
+<h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">7 modèles de VMC par insufflation pour chaque besoin</h2>
+<p class="text-gray-600">Du studio sans comble à l'établissement recevant du public, découvrez la gamme complète de VMC par insufflation, installée et entretenue par Pilotech-VMI en Île-de-France.</p>
+</div>
+<div class="relative">
+<button class="absolute -left-5 lg:-left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white border border-gray-200 shadow-md rounded-full flex items-center justify-center text-gray-600 hover:bg-brand hover:text-white hover:border-brand transition duration-300" id="gammes-prev"><i class="fa-solid fa-chevron-left"></i></button>
+<div class="overflow-hidden">
+<div class="flex transition-transform duration-500 ease-in-out gap-8" id="gammes-track">
+<!-- Product 1 -->
+<div class="gammes-slide flex-none w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition duration-300 flex flex-col">
+<div class="h-48 overflow-hidden mb-6 flex items-center justify-center">
+<img alt="Urban 2" class="w-full h-auto max-h-40 object-contain" src="images/urban-2.png"/>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">Urban 2</h3>
+<p class="text-gray-500 mb-6 flex-grow text-base">La solution entrée de gamme performante. Idéal pour les budgets maîtrisés avec une bonne efficacité énergétique.</p>
+<ul class="space-y-2 mb-6 text-sm text-gray-700">
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Efficacité énergétique A++</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Technologie Inverter</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Design compact</li>
+</ul>
+<a class="block w-full text-center px-4 py-2.5 bg-brand/10 hover:bg-brand text-brand hover:text-white font-semibold rounded transition duration-300" href="#">Découvrir Urban 2</a>
+</div>
+<!-- Product 2: Cube (highlighted) -->
+<div class="gammes-slide flex-none w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] bg-white rounded-xl p-8 border-2 border-brand shadow-md hover:shadow-lg transition duration-300 flex flex-col relative">
+<div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full">Notre sélection</div>
+<div class="h-48 overflow-hidden mb-6 flex items-center justify-center">
+<img alt="Cube" class="w-full h-auto max-h-40 object-contain" src="images/cube.png"/>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">Cube</h3>
+<p class="text-gray-500 mb-6 flex-grow text-base">La VMC compacte et autonome pour petits logements sans combles. Contrôle de l'humidité en silence, 24h/24.</p>
+<ul class="space-y-2 mb-6 text-sm text-gray-700">
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Design ultra plat (22 cm)</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Technologie Plasma Ionizer</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Connectivité WiFi intégrée</li>
+</ul>
+<a class="block w-full text-center px-4 py-2.5 bg-brand text-white font-semibold rounded transition duration-300" href="#">Découvrir Cube</a>
+</div>
+<!-- Product 3 -->
+<div class="gammes-slide flex-none w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition duration-300 flex flex-col">
+<div class="h-48 overflow-hidden mb-6 flex items-center justify-center">
+<img alt="Lofty" class="w-full h-auto max-h-40 object-contain" src="images/lofty.webp"/>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">Lofty</h3>
+<p class="text-gray-500 mb-6 flex-grow text-base">La VMC par insufflation des maisons avec combles. Élimine l'humidité et les taches noires, sans travaux lourds.</p>
+<ul class="space-y-2 mb-6 text-sm text-gray-700">
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Pose en combles (un carottage)</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Capteur de présence</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Finition premium bois/blanc</li>
+</ul>
+<a class="block w-full text-center px-4 py-2.5 bg-brand/10 hover:bg-brand text-brand hover:text-white font-semibold rounded transition duration-300" href="#">Découvrir Lofty</a>
+</div>
+<!-- Product 4 -->
+<div class="gammes-slide flex-none w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition duration-300 flex flex-col">
+<div class="h-48 overflow-hidden mb-6 flex items-center justify-center">
+<img alt="Purevent" class="w-full h-auto max-h-40 object-contain" src="images/purevent.png"/>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">Purevent</h3>
+<p class="text-sm text-gray-500 mb-6 flex-grow">La VMC par insufflation intelligente pour toute la maison. Autonome, elle ajuste la ventilation et préchauffe l'air entrant.</p>
+<ul class="space-y-2 mb-6 text-sm text-gray-700">
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Capteurs hygro &amp; CO2 (en option)</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Couplage PAC air/eau (module Hydro'R)</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Versions certifiées Eurovent</li>
+</ul>
+<a class="block w-full text-center px-4 py-2.5 bg-brand/10 hover:bg-brand text-brand hover:text-white font-semibold rounded transition duration-300" href="#">Découvrir Purevent</a>
+</div>
+<!-- Product 5 -->
+<div class="gammes-slide flex-none w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition duration-300 flex flex-col">
+<div class="h-48 overflow-hidden mb-6 flex items-center justify-center">
+<img alt="Cave" class="w-full h-auto max-h-40 object-contain" src="images/cave.webp"/>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">Cave</h3>
+<p class="text-sm text-gray-500 mb-6 flex-grow">Conçue pour assainir caves, sous-sols et garages. Elle élimine l'humidité et les moisissures et redonne vie aux espaces enterrés.</p>
+<ul class="space-y-2 mb-6 text-sm text-gray-700">
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Caves, sous-sols &amp; garages</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Anti-humidité &amp; anti-mérule</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Fonctionnement 100 % autonome</li>
+</ul>
+<a class="block w-full text-center px-4 py-2.5 bg-brand/10 hover:bg-brand text-brand hover:text-white font-semibold rounded transition duration-300" href="#">Découvrir Cave</a>
+</div>
+<!-- Product 6 -->
+<div class="gammes-slide flex-none w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition duration-300 flex flex-col">
+<div class="h-48 overflow-hidden mb-6 flex items-center justify-center">
+<img alt="Wally" class="w-full h-auto max-h-40 object-contain" src="images/wally.webp"/>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">Wally</h3>
+<p class="text-sm text-gray-500 mb-6 flex-grow">La solution anti-humidité des petits logements sans comble. Compacte, elle se fond dans tous les espaces.</p>
+<ul class="space-y-2 mb-6 text-sm text-gray-700">
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Pensée pour les logements sans comble</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Design compact et discret</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Multiples positions d'installation</li>
+</ul>
+<a class="block w-full text-center px-4 py-2.5 bg-brand/10 hover:bg-brand text-brand hover:text-white font-semibold rounded transition duration-300" href="#">Découvrir Wally</a>
+</div>
+<!-- Product 7 -->
+<div class="gammes-slide flex-none w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition duration-300 flex flex-col">
+<div class="h-48 overflow-hidden mb-6 flex items-center justify-center">
+<img alt="Pro 1000" class="w-full h-auto max-h-40 object-contain" src="images/pro-1000.webp"/>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">Pro 1000</h3>
+<p class="text-sm text-gray-500 mb-6 flex-grow">VMC par insufflation haute performance pour les établissements recevant du public. Filtration et régulation automatique des polluants selon l'occupation.</p>
+<ul class="space-y-2 mb-6 text-sm text-gray-700">
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Spéciale ERP (crèches, écoles, EHPAD)</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Débit jusqu'à 1000 m³/h</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Régulation CO2 automatique</li>
+</ul>
+<a class="block w-full text-center px-4 py-2.5 bg-brand/10 hover:bg-brand text-brand hover:text-white font-semibold rounded transition duration-300" href="#">Découvrir Pro 1000</a>
+</div>
+<!-- CTA Card -->
+<div class="gammes-slide flex-none w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] bg-brand rounded-xl p-8 shadow-sm flex flex-col items-center justify-center text-center text-white">
+<div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center text-3xl mb-6"><i class="fa-solid fa-question"></i></div>
+<h3 class="text-2xl font-bold mb-4">Besoin de plus d'informations ?</h3>
+<p class="text-brand-light mb-8">Nos experts sont là pour vous aider à choisir la gamme adaptée à vos besoins.</p>
+<a class="px-8 py-3 bg-white text-brand hover:bg-gray-100 font-bold rounded-md transition duration-300 w-full mb-4" href="#contact-section">Demander un devis</a>
+<a class="px-8 py-3 border border-white/40 hover:border-white text-white font-bold rounded-md transition duration-300 w-full" href="#contact-section">Nous contacter</a>
+</div>
+</div>
+</div>
+<button class="absolute -right-5 lg:-right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white border border-gray-200 shadow-md rounded-full flex items-center justify-center text-gray-600 hover:bg-brand hover:text-white hover:border-brand transition duration-300" id="gammes-next"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+<div class="flex justify-center gap-2 mt-8 mb-5" id="gammes-dots"></div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-20 md:py-32 bg-white" id="contact-section">
+<div class="container mx-auto px-4 lg:px-8 max-w-6xl">
+<div class="text-center mb-16">
+<div class="inline-flex items-center justify-center space-x-2 text-brand font-semibold text-xs tracking-wider uppercase mb-4">
+<span class="w-2 h-2 rounded-full bg-brand"></span><span>NOUS CONTACTER</span>
+</div>
+<h2 class="text-3xl md:text-4xl lg:text-[40px] font-bold text-gray-900 mb-4 tracking-tight">Envoyez-nous un Message</h2>
+<p class="text-gray-500 max-w-2xl mx-auto text-sm md:text-base">Une question, un projet ou besoin d'un devis ? Remplissez le formulaire ci-dessous et notre équipe vous répondra sous 48h.</p>
+</div>
+<div class="flex flex-col lg:flex-row rounded-3xl overflow-hidden bg-[#FAFAFA] border border-gray-100 shadow-sm min-h-[600px]">
+<div class="lg:w-2/5 bg-brand p-8 md:p-12 text-white flex flex-col justify-between rounded-3xl m-2">
+<div>
+<h3 class="text-2xl font-bold mb-4">Informations de Contact</h3>
+<p class="text-white/80 text-sm mb-10 leading-relaxed">Nous sommes à votre disposition pour répondre à toutes vos questions concernant nos solutions de ventilation compacte et anti-humidité pour logements.</p>
+<div class="space-y-8">
+<div class="flex items-start">
+<div class="w-10 h-10 bg-white/10 rounded flex items-center justify-center mr-4 shrink-0"><i class="fa-solid fa-location-dot"></i></div>
+<div>
+<h4 class="font-bold text-sm mb-1">Adresse</h4>
+<p class="text-white/80 leading-relaxed text-base">123 Avenue de la République<br/>75011 Paris, France</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 bg-white/10 rounded flex items-center justify-center mr-4 shrink-0"><i class="fa-solid fa-phone"></i></div>
+<div>
+<h4 class="font-bold text-sm mb-1">Téléphone</h4>
+<a class="text-white/80 hover:text-white transition text-base" href="tel:0185441253">01 85 44 12 53</a>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 bg-white/10 rounded flex items-center justify-center mr-4 shrink-0"><i class="fa-solid fa-envelope"></i></div>
+<div>
+<h4 class="font-bold text-sm mb-1">Email</h4>
+<a class="text-white/80 hover:text-white transition text-base" href="mailto:info@pilotech.eu">info@pilotech.eu</a>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 bg-white/10 rounded flex items-center justify-center mr-4 shrink-0"><i class="fa-solid fa-clock"></i></div>
+<div>
+<h4 class="font-bold text-sm mb-1">Horaires</h4>
+<p class="text-white/80 leading-relaxed text-base">Lun – Ven : 8h00 – 18h00<br/>Sam : 9h00 – 13h00</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-white/10">
+<div class="flex items-center mb-6">
+<div class="flex text-yellow-400 text-sm mr-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<span class="font-bold mr-2">5.0</span><span class="text-white/80 text-sm">— 82 avis Google</span>
+</div>
+</div>
+</div>
+<div class="lg:w-3/5 p-8 md:p-12 lg:p-16">
+<h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2">Envoyez votre message</h3>
+<p class="text-sm text-gray-500 mb-8">Tous les champs marqués d'un * sont obligatoires.</p>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div><label class="block text-xs font-semibold text-gray-600 uppercase mb-2" for="name">Nom Complet *</label><input class="w-full px-4 py-3 rounded border border-gray-200 focus:ring-2 focus:ring-brand focus:border-transparent outline-none transition text-sm bg-white" id="name" placeholder="Jean Dupont" required="" type="text"/></div>
+<div><label class="block text-xs font-semibold text-gray-600 uppercase mb-2" for="email">Adresse Email *</label><input class="w-full px-4 py-3 rounded border border-gray-200 focus:ring-2 focus:ring-brand focus:border-transparent outline-none transition text-sm bg-white" id="email" placeholder="jean@exemple.fr" required="" type="email"/></div>
+<div><label class="block text-xs font-semibold text-gray-600 uppercase mb-2" for="phone">Téléphone</label><input class="w-full px-4 py-3 rounded border border-gray-200 focus:ring-2 focus:ring-brand focus:border-transparent outline-none transition text-sm bg-white" id="phone" placeholder="06 12 34 56 78" type="tel"/></div>
+<div><label class="block text-xs font-semibold text-gray-600 uppercase mb-2" for="subject">Sujet *</label><select class="w-full px-4 py-3 rounded border border-gray-200 focus:ring-2 focus:ring-brand focus:border-transparent outline-none transition text-sm bg-white appearance-none" id="subject" required="">
+<option disabled="" selected="" value="">Choisissez un sujet</option>
+<option value="devis">Demande de devis</option>
+<option value="info">Demande d'information</option>
+<option value="sav">Service après-vente</option>
+</select></div>
+</div>
+<div><label class="block text-xs font-semibold text-gray-600 uppercase mb-3">Type de logement *</label>
+<div class="flex flex-wrap gap-4">
+<label class="flex items-center cursor-pointer"><input class="w-4 h-4 text-brand focus:ring-brand border-gray-300" name="property_type" type="radio" value="appartement"/><span class="ml-2 text-sm text-gray-600">Appartement</span></label>
+<label class="flex items-center cursor-pointer"><input class="w-4 h-4 text-brand focus:ring-brand border-gray-300" name="property_type" type="radio" value="maison"/><span class="ml-2 text-sm text-gray-600">Maison</span></label>
+<label class="flex items-center cursor-pointer"><input class="w-4 h-4 text-brand focus:ring-brand border-gray-300" name="property_type" type="radio" value="pro"/><span class="ml-2 text-sm text-gray-600">Local professionnel</span></label>
+<label class="flex items-center cursor-pointer"><input class="w-4 h-4 text-brand focus:ring-brand border-gray-300" name="property_type" type="radio" value="autre"/><span class="ml-2 text-sm text-gray-600">Autre</span></label>
+</div>
+</div>
+<div><label class="block text-xs font-semibold text-gray-600 uppercase mb-2" for="message">Votre Message *</label><textarea class="w-full px-4 py-3 rounded border border-gray-200 focus:ring-2 focus:ring-brand focus:border-transparent outline-none transition text-sm bg-white resize-none" id="message" placeholder="Décrivez votre problème d'humidité ou votre projet de ventilation en détail..." required="" rows="4"></textarea></div>
+<div class="flex items-start"><input class="w-4 h-4 mt-0.5 text-brand rounded border-gray-300 focus:ring-brand" id="privacy" required="" type="checkbox"/><label class="ml-3 text-xs text-gray-500 leading-relaxed cursor-pointer" for="privacy">J'accepte que mes données personnelles soient utilisées par Pilotech pour répondre à ma demande, conformément à la politique de confidentialité.</label></div>
+<div class="flex flex-col sm:flex-row sm:items-center gap-4 mt-8">
+<button class="inline-flex justify-center items-center px-8 py-3.5 bg-brand hover:bg-brand-dark text-white font-semibold rounded transition duration-300 shadow-sm" type="submit"><i class="fa-solid fa-paper-plane mr-2"></i> Envoyer le message</button>
+<div class="flex items-center text-xs text-gray-400"><i class="fa-solid fa-lock mr-2 text-gray-300"></i> Vos données sont sécurisées et ne seront jamais partagées.</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-20 bg-gray-50 overflow-hidden" id="temoignages">
+<div class="container mx-auto px-4 lg:px-8">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<div class="inline-flex items-center justify-center space-x-2 text-brand font-semibold text-xs tracking-wider uppercase mb-4">
+<span class="w-2 h-2 rounded-full bg-brand"></span><span>TÉMOIGNAGES</span>
+</div>
+<h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Ce Que Disent Nos Clients</h2>
+</div>
+</div>
+<div class="relative">
+<div class="temoignages-fade-left absolute left-0 top-0 bottom-0 w-24 z-10"></div>
+<div class="temoignages-fade-right absolute right-0 top-0 bottom-0 w-24 z-10"></div>
+<div class="overflow-hidden">
+<div id="temoignages-marquee">
+<div class="flex-none w-[420px] mx-4 bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+<div class="text-brand/10 text-6xl absolute top-6 right-8"><i class="fa-solid fa-quote-right"></i></div>
+<p class="text-gray-600 mb-6 relative z-10 italic">"Le Cube est incroyablement discret. On ne l'entend presque pas et depuis l'installation, plus aucune condensation sur nos fenêtres. Notre appartement est enfin sain !"</p>
+<div class="flex text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<div class="flex items-center"><img alt="Client" class="w-12 h-12 rounded-full object-cover mr-4" src="https://i.pravatar.cc/150?img=2"/>
+<div>
+<h4 class="font-bold text-gray-900">Michel De l'Isle</h4>
+<p class="text-xs text-gray-500">Installation Résidentielle - Paris</p>
+</div>
+</div>
+</div>
+<div class="flex-none w-[420px] mx-4 bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+<div class="text-brand/10 text-6xl absolute top-6 right-8"><i class="fa-solid fa-quote-right"></i></div>
+<p class="text-gray-600 mb-6 relative z-10 italic">"Excellente expérience de A à Z. Devis clair, tarifs compétitifs, et techniciens très polis qui ont laissé le chantier impeccable. La gamme Daiseikai est top."</p>
+<div class="flex text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<div class="flex items-center"><img alt="Client" class="w-12 h-12 rounded-full object-cover mr-4" src="https://i.pravatar.cc/150?img=5"/>
+<div>
+<h4 class="font-bold text-gray-900">Sophie Villeneuve</h4>
+<p class="text-xs text-gray-500">Pompe à Chaleur - Versailles</p>
+</div>
+</div>
+</div>
+<div class="flex-none w-[420px] mx-4 bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+<div class="text-brand/10 text-6xl absolute top-6 right-8"><i class="fa-solid fa-quote-right"></i></div>
+<p class="text-gray-600 mb-6 relative z-10 italic">"Intervention rapide et soignée pour l'installation de la VMC Pro 1000 dans notre crèche. La qualité de l'air s'est nettement améliorée et nos équipes sont ravies du résultat."</p>
+<div class="flex text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<div class="flex items-center"><img alt="Client" class="w-12 h-12 rounded-full object-cover mr-4" src="https://i.pravatar.cc/150?img=6"/>
+<div>
+<h4 class="font-bold text-gray-900">Isabelle Moreau</h4>
+<p class="text-xs text-gray-500">VMC Pro 1000 - Crèche, Montreuil</p>
+</div>
+</div>
+</div>
+<div class="flex-none w-[420px] mx-4 bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+<div class="text-brand/10 text-6xl absolute top-6 right-8"><i class="fa-solid fa-quote-right"></i></div>
+<p class="text-gray-600 mb-6 relative z-10 italic">"Nous avons fait appel à Pilotech pour la ventilation de nos bureaux. Le technicien a été très pédagogue, le délai d'installation respecté et le suivi après-vente est au top."</p>
+<div class="flex text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<div class="flex items-center"><img alt="Client" class="w-12 h-12 rounded-full object-cover mr-4" src="https://i.pravatar.cc/150?img=3"/>
+<div>
+<h4 class="font-bold text-gray-900">Thomas Leroux</h4>
+<p class="text-xs text-gray-500">VMC Tertiaire - Bureaux, Paris 8e</p>
+</div>
+</div>
+</div>
+<div class="flex-none w-[420px] mx-4 bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+<div class="text-brand/10 text-6xl absolute top-6 right-8"><i class="fa-solid fa-quote-right"></i></div>
+<p class="text-gray-600 mb-6 relative z-10 italic">"Très satisfait de la pose du système Purevent dans notre maison. L'humidité a disparu en quelques semaines et les nuisances sonores sont inexistantes. Bravo à toute l'équipe !"</p>
+<div class="flex text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<div class="flex items-center"><img alt="Client" class="w-12 h-12 rounded-full object-cover mr-4" src="https://i.pravatar.cc/150?img=4"/>
+<div>
+<h4 class="font-bold text-gray-900">Laurent Bonnet</h4>
+<p class="text-xs text-gray-500">VMC Purevent - Résidentiel, Vincennes</p>
+</div>
+</div>
+</div>
+<div class="flex-none w-[420px] mx-4 bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+<div class="text-brand/10 text-6xl absolute top-6 right-8"><i class="fa-solid fa-quote-right"></i></div>
+<p class="text-gray-600 mb-6 relative z-10 italic">"Pilotech a installé la Pro 1000 dans notre EHPAD. Le résultat est remarquable : l'air est plus sain, les résidents se sentent mieux et la consommation énergétique a baissé. Je recommande sans hésiter."</p>
+<div class="flex text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<div class="flex items-center"><img alt="Client" class="w-12 h-12 rounded-full object-cover mr-4" src="https://i.pravatar.cc/150?img=1"/>
+<div>
+<h4 class="font-bold text-gray-900">Nathalie Girard</h4>
+<p class="text-xs text-gray-500">VMC Pro 1000 - EHPAD, Saint-Denis</p>
+</div>
+</div>
+</div>
+<div class="flex-none w-[420px] mx-4 bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+<div class="text-brand/10 text-6xl absolute top-6 right-8"><i class="fa-solid fa-quote-right"></i></div>
+<p class="text-gray-600 mb-6 relative z-10 italic">"Le Cube est incroyablement discret. On ne l'entend presque pas et depuis l'installation, plus aucune condensation sur nos fenêtres. Notre appartement est enfin sain !"</p>
+<div class="flex text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<div class="flex items-center"><img alt="Client" class="w-12 h-12 rounded-full object-cover mr-4" src="https://i.pravatar.cc/150?img=2"/>
+<div>
+<h4 class="font-bold text-gray-900">Michel De l'Isle</h4>
+<p class="text-xs text-gray-500">Installation Résidentielle - Paris</p>
+</div>
+</div>
+</div>
+<div class="flex-none w-[420px] mx-4 bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+<div class="text-brand/10 text-6xl absolute top-6 right-8"><i class="fa-solid fa-quote-right"></i></div>
+<p class="text-gray-600 mb-6 relative z-10 italic">"Excellente expérience de A à Z. Devis clair, tarifs compétitifs, et techniciens très polis qui ont laissé le chantier impeccable. La gamme Daiseikai est top."</p>
+<div class="flex text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<div class="flex items-center"><img alt="Client" class="w-12 h-12 rounded-full object-cover mr-4" src="https://i.pravatar.cc/150?img=5"/>
+<div>
+<h4 class="font-bold text-gray-900">Sophie Villeneuve</h4>
+<p class="text-xs text-gray-500">Pompe à Chaleur - Versailles</p>
+</div>
+</div>
+</div>
+<div class="flex-none w-[420px] mx-4 bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+<div class="text-brand/10 text-6xl absolute top-6 right-8"><i class="fa-solid fa-quote-right"></i></div>
+<p class="text-gray-600 mb-6 relative z-10 italic">"Intervention rapide et soignée pour l'installation de la VMC Pro 1000 dans notre crèche. La qualité de l'air s'est nettement améliorée et nos équipes sont ravies du résultat."</p>
+<div class="flex text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<div class="flex items-center"><img alt="Client" class="w-12 h-12 rounded-full object-cover mr-4" src="https://i.pravatar.cc/150?img=6"/>
+<div>
+<h4 class="font-bold text-gray-900">Isabelle Moreau</h4>
+<p class="text-xs text-gray-500">VMC Pro 1000 - Crèche, Montreuil</p>
+</div>
+</div>
+</div>
+<div class="flex-none w-[420px] mx-4 bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+<div class="text-brand/10 text-6xl absolute top-6 right-8"><i class="fa-solid fa-quote-right"></i></div>
+<p class="text-gray-600 mb-6 relative z-10 italic">"Nous avons fait appel à Pilotech pour la ventilation de nos bureaux. Le technicien a été très pédagogue, le délai d'installation respecté et le suivi après-vente est au top."</p>
+<div class="flex text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<div class="flex items-center"><img alt="Client" class="w-12 h-12 rounded-full object-cover mr-4" src="https://i.pravatar.cc/150?img=3"/>
+<div>
+<h4 class="font-bold text-gray-900">Thomas Leroux</h4>
+<p class="text-xs text-gray-500">VMC Tertiaire - Bureaux, Paris 8e</p>
+</div>
+</div>
+</div>
+<div class="flex-none w-[420px] mx-4 bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+<div class="text-brand/10 text-6xl absolute top-6 right-8"><i class="fa-solid fa-quote-right"></i></div>
+<p class="text-gray-600 mb-6 relative z-10 italic">"Très satisfait de la pose du système Purevent dans notre maison. L'humidité a disparu en quelques semaines et les nuisances sonores sont inexistantes. Bravo à toute l'équipe !"</p>
+<div class="flex text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<div class="flex items-center"><img alt="Client" class="w-12 h-12 rounded-full object-cover mr-4" src="https://i.pravatar.cc/150?img=4"/>
+<div>
+<h4 class="font-bold text-gray-900">Laurent Bonnet</h4>
+<p class="text-xs text-gray-500">VMC Purevent - Résidentiel, Vincennes</p>
+</div>
+</div>
+</div>
+<div class="flex-none w-[420px] mx-4 bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+<div class="text-brand/10 text-6xl absolute top-6 right-8"><i class="fa-solid fa-quote-right"></i></div>
+<p class="text-gray-600 mb-6 relative z-10 italic">"Pilotech a installé la Pro 1000 dans notre EHPAD. Le résultat est remarquable : l'air est plus sain, les résidents se sentent mieux et la consommation énergétique a baissé. Je recommande sans hésiter."</p>
+<div class="flex text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<div class="flex items-center"><img alt="Client" class="w-12 h-12 rounded-full object-cover mr-4" src="https://i.pravatar.cc/150?img=1"/>
+<div>
+<h4 class="font-bold text-gray-900">Nathalie Girard</h4>
+<p class="text-xs text-gray-500">VMC Pro 1000 - EHPAD, Saint-Denis</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></section>
+<!-- Blog Section -->
+<section class="py-20 bg-white" id="blog">
+<div class="container mx-auto px-4 lg:px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12">
+<div>
+<div class="inline-flex items-center space-x-2 text-brand font-semibold text-xs tracking-wider uppercase mb-4">
+<span class="w-2 h-2 rounded-full bg-brand"></span><span>CONSEILS &amp; ACTUALITÉS</span></div>
+<h2 class="text-3xl lg:text-4xl font-bold text-gray-900 max-w-lg">
+            Nos Derniers Articles</h2>
+</div><a class="mt-6 md:mt-0 px-6 py-3 bg-brand hover:bg-brand-dark text-white font-semibold rounded-md transition duration-300 shrink-0" href="#">Voir
+          Tous Les Articles</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Article 1 --><a class="group block" href="#">
+<div class="h-64 rounded-xl overflow-hidden mb-6"><img alt="modern smart home thermostat on wall with hand adjusting temperature" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1567925086977-6b9be6f5fdc9?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+</div>
+<div class="flex items-center space-x-4 text-xs text-gray-500 mb-3">
+<span><i class="fa-regular fa-calendar mr-2"></i> 12 Octobre
+              2024</span><span><i class="fa-solid fa-tag mr-2"></i> Guide
+              d'achat</span></div>
+<h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand transition">
+            Comment Choisir sa Climatisation en 2025 ?</h3>
+<p class="text-gray-600 text-sm">Découvrez notre guide complet pour
+            trouver le système de climatisation adapté à votre logement...</p>
+</a><!-- Article 2 --><a class="group block" href="#">
+<div class="h-64 rounded-xl overflow-hidden mb-6"><img alt="heat pump outdoor unit next to modern house exterior, bright sunny day" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+</div>
+<div class="flex items-center space-x-4 text-xs text-gray-500 mb-3">
+<span><i class="fa-regular fa-calendar mr-2"></i> 28 Septembre
+              2024</span><span><i class="fa-solid fa-tag mr-2"></i>
+              Économies</span></div>
+<h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand transition">
+            Les Avantages de la Pompe à Chaleur</h3>
+<p class="text-gray-600 text-sm">Économies d'énergie, confort et
+            écologie : pourquoi vous devriez passer à la pompe à chaleur...
+          </p>
+</a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white" id="footer">
+<div class="border-b border-gray-800">
+<div class="container mx-auto px-4 lg:px-8 py-12">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<div class="mb-6 md:mb-0">
+<h3 class="text-2xl font-bold mb-2">Besoin d'un devis pour votre projet ?</h3>
+<p class="text-gray-400">Contactez-nous pour une étude personnalisée et gratuite.</p>
+</div>
+<a class="px-8 py-4 bg-brand hover:bg-brand-dark text-white font-bold rounded-md transition duration-300" href="gammes.html">Demander un Devis Gratuit</a>
+</div>
+</div>
+</div>
+<div class="container mx-auto px-4 lg:px-8 py-16">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div>
+<a class="text-2xl font-bold flex items-center space-x-2 mb-6" href="index.html">
+<span class="w-8 h-8 rounded-full bg-brand flex items-center justify-center text-white text-sm"><i class="fa-solid fa-wind"></i></span>
+<span class="text-white tracking-tight">Pilotech-VMI</span>
+</a>
+<p class="text-gray-400 text-sm mb-6 leading-relaxed">Spécialiste de la ventilation mécanique contrôlée (VMC/VMI) en Île-de-France. Installateur certifié.</p>
+<div class="flex space-x-4">
+<a class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brand hover:text-white transition" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+<a class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brand hover:text-white transition" href="#"><i class="fa-brands fa-instagram"></i></a>
+<a class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brand hover:text-white transition" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Nos gammes</h4>
+<ul class="space-y-3 text-sm text-gray-400 grid grid-cols-2">
+<li><a class="hover:text-brand transition" href="wally.html">Wally</a></li>
+<li><a class="hover:text-brand transition" href="lofty.html">Lofty</a></li>
+<li><a class="hover:text-brand transition" href="pro-1000.html">Pro 1000</a></li>
+<li><a class="hover:text-brand transition" href="cave.html">Cave</a></li>
+<li><a class="hover:text-brand transition" href="cube.html">Cube</a></li>
+<li><a class="hover:text-brand transition" href="urban-2.html">Urban 2</a></li>
+<li><a class="hover:text-brand transition" href="purevent.html">Purevent</a></li>
+<li><a class="hover:text-brand transition" href="gammes.html">Tout voir</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Entreprise</h4>
+<ul class="space-y-3 text-sm text-gray-400">
+<li><a class="hover:text-brand transition" href="a-propos.html">À Propos</a></li>
+<li><a class="hover:text-brand transition" href="index.html#realisations">Nos Réalisations</a></li>
+<li><a class="hover:text-brand transition" href="blog.html">Blog &amp; Actualités</a></li>
+<li><a class="hover:text-brand transition" href="index.html#contact">Contact</a></li>
+</ul>
+</div>
+<div id="contact">
+<h4 class="text-lg font-bold mb-6">Contact</h4>
+<ul class="space-y-4 text-sm text-gray-400">
+<li class="flex items-start">
+<i class="fa-solid fa-location-dot text-brand mt-1 mr-3"></i>
+<span>123 Avenue de la République<br/>75011 Paris, France</span>
+</li>
+<li class="flex items-center">
+<i class="fa-solid fa-phone text-brand mr-3"></i>
+<span>01 85 44 12 53</span>
+</li>
+<li class="flex items-center">
+<i class="fa-solid fa-envelope text-brand mr-3"></i>
+<span>info@pilotech.eu</span>
+</li>
+<li class="flex items-start">
+<i class="fa-solid fa-clock text-brand mr-3 mt-0.5"></i>
+<span>Lun – Ven : 8h00 – 18h00<br/>Sam : 9h00 – 13h00</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+<p>© 2026 Pilotech-VMI. Tous droits réservés.</p>
+<div class="flex space-x-4 mt-4 md:mt-0">
+<a class="hover:text-white transition" href="#">Mentions Légales</a>
+<a class="hover:text-white transition" href="#">Politique de Confidentialité</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    (function()
+    {
+      var track = document.getElementById('gammes-track');
+      var prevBtn = document.getElementById('gammes-prev');
+      var nextBtn = document.getElementById('gammes-next');
+      var dotsContainer = document.getElementById('gammes-dots');
+      var slides = Array.from(track.querySelectorAll('.gammes-slide'));
+      var totalSlides = slides.length;
+      var currentIndex = 0;
+
+      function getSlidesPerView()
+      {
+        if (window.innerWidth >= 1024) return 3;
+        if (window.innerWidth >= 640) return 2;
+        return 1;
+      }
+
+      function getMaxIndex()
+      {
+        return Math.max(0, totalSlides - getSlidesPerView());
+      }
+
+      function buildDots()
+      {
+        dotsContainer.innerHTML = '';
+        var count = getMaxIndex() + 1;
+        for (var i = 0; i < count; i++)
+        {
+          var dot = document.createElement('button');
+          dot.className =
+            'w-2.5 h-2.5 rounded-full transition duration-300 ' + (i ===
+              currentIndex ? 'bg-brand scale-110' :
+              'bg-gray-300 hover:bg-brand/50');
+          dot.setAttribute('data-index', i);
+          dot.addEventListener('click', function()
+          {
+            goTo(parseInt(this.getAttribute('data-index')));
+          });
+          dotsContainer.appendChild(dot);
+        }
+      }
+
+      function updateDots()
+      {
+        var dots = dotsContainer.querySelectorAll('button');
+        dots.forEach(function(dot, i)
+        {
+          dot.className =
+            'w-2.5 h-2.5 rounded-full transition duration-300 ' + (
+              i === currentIndex ? 'bg-brand scale-110' :
+              'bg-gray-300 hover:bg-brand/50');
+        });
+      }
+
+      function goTo(index)
+      {
+        var max = getMaxIndex();
+        currentIndex = Math.max(0, Math.min(index, max));
+        var slideWidth = slides[0].offsetWidth + 32;
+        track.style.transform = 'translateX(-' + (currentIndex *
+          slideWidth) + 'px)';
+        prevBtn.style.opacity = currentIndex === 0 ? '0.4' : '1';
+        nextBtn.style.opacity = currentIndex >= max ? '0.4' : '1';
+        updateDots();
+      }
+
+      prevBtn.addEventListener('click', function()
+      {
+        goTo(currentIndex - 1);
+      });
+      nextBtn.addEventListener('click', function()
+      {
+        goTo(currentIndex + 1);
+      });
+
+      window.addEventListener('resize', function()
+      {
+        buildDots();
+        goTo(Math.min(currentIndex, getMaxIndex()));
+      });
+
+      buildDots();
+      goTo(0);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pilotech-VMI - Installateur VMC en Île-de-France</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest' };</script>
+<script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            brand: {
+              DEFAULT: '#57368C',
+              dark: '#442a6d',
+              light: '#f5f3f9'
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    ::-webkit-scrollbar { display: none; }
+    .hero-bg {
+      background-image: linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.72)), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2075&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    #temoignages-marquee {
+      display: flex;
+      width: max-content;
+      animation: temoignages-scroll 36s linear infinite;
+    }
+    @keyframes temoignages-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+<!-- ===== HEADER ===== -->
+<header class="sticky top-0 z-50 flex w-full shadow-sm bg-white" id="header">
+<div class="hidden lg:flex w-64 items-center justify-center bg-white border-r border-gray-100">
+<a class="text-2xl font-bold flex items-center space-x-2" href="index.html">
+<i class="fa-solid fa-wind text-brand text-2xl"></i>
+<span class="text-gray-900 tracking-tight">Pilotech<span class="text-brand font-extrabold">-VMI</span></span>
+</a>
+</div>
+<div class="flex-1 flex flex-col border-l border-gray-100">
+<div class="lg:flex px-8 py-2 text-xs font-medium text-gray-500 border-b border-gray-100 items-center flex flex-row justify-between hidden">
+<div class="flex space-x-4 mr-6 justify-between items-center">
+<a class="hover:text-brand transition flex items-center" href="tel:0185441253">
+<i class="fa-solid fa-phone mr-2 text-gray-400"></i> 01 85 44 12 53
+          </a>
+<span class="text-gray-300">|</span>
+<a class="hover:text-brand transition flex items-center" href="mailto:info@pilotech.eu">
+<i class="fa-solid fa-paper-plane mr-2 text-gray-400"></i> info@pilotech.eu
+          </a>
+<span class="text-gray-300">|</span>
+<span class="flex items-center">
+<i class="fa-solid fa-star text-brand mr-2"></i> 5/5 — 82 avis Google
+          </span>
+</div>
+<div class="flex items-center space-x-4 pl-4 border-l border-gray-100 text-sm">
+<a class="hover:text-brand transition text-gray-700" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+<a class="hover:text-brand transition text-gray-700" href="#"><i class="fa-brands fa-instagram"></i></a>
+<a class="hover:text-brand transition text-gray-700" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+</div>
+</div>
+<div class="flex justify-between items-center px-4 lg:px-8 py-4 lg:py-3">
+<a class="lg:hidden text-xl font-bold flex items-center space-x-2" href="index.html">
+<i class="fa-solid fa-wind text-brand"></i>
+<span class="text-gray-900 tracking-tight">Pilotech<span class="text-brand font-extrabold">-VMI</span></span>
+</a>
+<nav class="hidden lg:flex items-center space-x-8 font-semibold text-gray-700 text-sm">
+<a class="text-brand border-b-2 border-brand pb-1" href="index.html">Accueil</a>
+<a class="hover:text-brand transition pb-1" href="a-propos.html">À propos</a>
+<a class="hover:text-brand transition pb-1" href="gammes.html">Gammes VMI</a>
+<a class="hover:text-brand transition pb-1" href="index.html#realisations">Réalisations</a>
+<a class="hover:text-brand transition pb-1" href="index.html#temoignages">Témoignages</a>
+<a class="hover:text-brand transition pb-1" href="#contact">Contact</a>
+</nav>
+<div class="flex items-center space-x-4 lg:hidden">
+<a class="px-4 py-2 bg-brand text-white font-semibold rounded text-sm" href="#contact">Devis</a>
+<button class="text-gray-600 text-2xl focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"><i class="fa-solid fa-bars"></i></button>
+</div>
+</div>
+<div class="hidden lg:hidden px-4 pb-4 flex flex-col space-y-3 font-semibold text-gray-700 text-sm border-t border-gray-100 pt-4" id="mobile-menu">
+<a class="hover:text-brand transition" href="index.html">Accueil</a><a class="hover:text-brand transition" href="a-propos.html">À propos</a><a class="hover:text-brand transition" href="gammes.html">Gammes VMI</a><a class="hover:text-brand transition" href="index.html#realisations">Réalisations</a><a class="hover:text-brand transition" href="index.html#temoignages">Témoignages</a><a class="hover:text-brand transition" href="#contact">Contact</a>
+</div>
+</div>
+<div class="hidden lg:flex w-64 bg-gray-950 items-center justify-center">
+<a class="inline-flex items-center justify-center px-6 py-2.5 bg-brand hover:bg-brand-dark text-white font-semibold rounded transition duration-300" href="#contact">
+<i class="fa-solid fa-file-invoice mr-2"></i> Devis Gratuit
+      </a>
+</div>
+</header>
+<!-- ===== HERO SECTION ===== -->
+<section class="relative pt-20 pb-32 lg:pt-32 lg:pb-40 hero-bg" id="hero">
+<div class="container mx-auto px-4 lg:px-8 relative z-10">
+<div class="flex flex-col lg:flex-row gap-12 items-center">
+<div class="lg:w-3/5 text-white">
+<div class="inline-flex items-center space-x-2 bg-brand/20 border border-brand/40 text-white/90 text-xs font-semibold px-3 py-1.5 rounded-full mb-6 backdrop-blur-sm">
+<i class="fa-solid fa-shield-halved text-brand mr-1"></i>
+<span>Installateur Certifié VMC — Île-de-France</span>
+</div>
+<h1 class="text-4xl lg:text-6xl font-bold leading-tight mb-6">
+            Votre Spécialiste VMC en Île-de-France
+          </h1>
+<p class="text-lg text-gray-200 mb-8 max-w-2xl">
+            Installation, remplacement et entretien de systèmes de ventilation mécanique contrôlée pour particuliers et professionnels. Devis gratuit, interventions rapides et qualité certifiée.
+          </p>
+<div class="flex flex-col sm:flex-row gap-4 mb-10">
+<a class="inline-flex justify-center items-center px-8 py-3.5 bg-brand hover:bg-brand-dark text-white font-semibold rounded-md transition duration-300" href="#contact">
+<i class="fa-solid fa-file-invoice mr-2"></i> Demander un Devis Gratuit
+            </a>
+<a class="inline-flex justify-center items-center px-8 py-3.5 bg-white text-gray-900 hover:bg-gray-50 font-semibold rounded-md transition duration-300" href="tel:0184000000">
+<i class="fa-solid fa-phone mr-2 text-brand"></i> Nous Appeler
+            </a>
+</div>
+<div class="flex items-center space-x-3 text-sm">
+<div class="flex text-yellow-400">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<span class="font-semibold text-white">5.0</span>
+<span class="text-gray-300">— 82 avis Google vérifiés</span>
+</div>
+</div>
+<div class="lg:w-2/5 w-full max-w-md mx-auto">
+<div class="bg-gray-900/95 backdrop-blur-sm p-8 rounded-xl border border-gray-700 shadow-2xl">
+<h3 class="text-xl font-bold text-white mb-2">Obtenir un Devis Gratuit</h3>
+<p class="text-gray-400 text-xs mb-6">Réponse sous 24h — Sans engagement</p>
+<form class="space-y-4">
+<div>
+<label class="block text-xs font-medium text-gray-400 mb-1">Nom complet *</label>
+<input class="w-full bg-gray-800 border border-brand/40 rounded-md px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand" placeholder="Jean Dupont" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-gray-400 mb-1">Téléphone *</label>
+<input class="w-full bg-gray-800 border border-brand/40 rounded-md px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand" placeholder="06 12 34 56 78" type="tel"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-gray-400 mb-1">Adresse *</label>
+<input class="w-full bg-gray-800 border border-brand/40 rounded-md px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand" placeholder="12 rue de la Paix, Paris" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-gray-400 mb-1">Code Postal *</label>
+<input class="w-full bg-gray-800 border border-brand/40 rounded-md px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand" placeholder="75001" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-gray-400 mb-1">Type de projet *</label>
+<select class="w-full bg-gray-800 border border-brand/40 rounded-md px-4 py-2.5 text-white focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand appearance-none">
+<option>Installation VMC, Remplacement, Entretien...</option>
+<option>Installation VMC Simple Flux</option>
+<option>Installation VMC Double Flux</option>
+<option>Remplacement / Rénovation</option>
+<option>Entretien &amp; Nettoyage</option>
+<option>Local Professionnel</option>
+</select>
+</div>
+<button class="w-full mt-2 bg-brand hover:bg-brand-dark text-white font-bold py-3 rounded-md transition duration-300" type="submit">
+                Envoyer ma Demande
+              </button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== TRUST INDICATORS ===== -->
+<div class="relative z-20 -mt-12 lg:-mt-16 container mx-auto px-4 lg:px-8 max-w-6xl mb-8" id="trust-indicators">
+<div class="bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.07)] p-6 lg:p-8 flex flex-col md:flex-row gap-6 md:gap-0 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+<div class="flex items-start md:w-1/3 md:pr-8 pt-2 md:pt-0">
+<div class="w-14 h-14 rounded-xl bg-brand/10 flex items-center justify-center text-brand shrink-0 mr-5">
+<i class="fa-solid fa-clock text-2xl"></i>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-gray-900 text-[17px] mb-1">Intervention Rapide</h3>
+<p class="text-sm text-gray-500 leading-relaxed">Réponse sous 24h et installation dans les meilleurs délais.</p>
+</div>
+</div>
+<div class="flex items-start md:w-1/3 md:px-8 pt-6 md:pt-0">
+<div class="w-14 h-14 rounded-xl bg-brand/10 flex items-center justify-center text-brand shrink-0 mr-5">
+<i class="fa-solid fa-certificate text-2xl"></i>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-gray-900 text-[17px] mb-1">Expertise Certifiée</h3>
+<p class="text-sm text-gray-500 leading-relaxed">Installateur agréé VMC avec garantie et respect des normes RE2020.</p>
+</div>
+</div>
+<div class="flex items-start md:w-1/3 md:pl-8 pt-6 md:pt-0">
+<div class="w-14 h-14 rounded-xl bg-brand/10 flex items-center justify-center text-brand shrink-0 mr-5">
+<i class="fa-solid fa-star text-2xl"></i>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-gray-900 text-[17px] mb-1">5.0 — 82 Avis Google</h3>
+<p class="text-sm text-gray-500 leading-relaxed">Plus de 500 installations réalisées avec 100 % de clients satisfaits.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ===== ABOUT SECTION ===== -->
+<section class="py-20 md:py-24 bg-gray-50" id="about">
+<div class="container mx-auto px-4 lg:px-8">
+<div class="flex flex-col lg:flex-row items-center gap-14">
+<div class="lg:w-1/2">
+<div class="relative h-[420px] w-full rounded-2xl overflow-hidden shadow-lg">
+<div class="absolute inset-0 bg-brand/10 z-10"></div>
+<img alt="professional VMC ventilation technician" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+</div>
+</div>
+<div class="lg:w-1/2">
+<div class="inline-flex items-center space-x-2 text-brand font-semibold text-xs tracking-wider uppercase mb-4">
+<span class="w-2 h-2 rounded-full bg-brand"></span><span>À PROPOS</span>
+</div>
+<h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Votre Spécialiste VMC en Île-de-France</h2>
+<p class="text-gray-600 mb-8 leading-relaxed">
+            Pilotech-VMI est votre partenaire de confiance pour l'installation, le remplacement et l'entretien de systèmes VMC. Nous intervenons auprès des particuliers et professionnels dans toute la région parisienne, avec rapidité et transparence.
+          </p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center text-gray-700"><i class="fa-solid fa-check text-brand mr-3"></i> Installateur certifié VMC Simple et Double Flux</li>
+<li class="flex items-center text-gray-700"><i class="fa-solid fa-check text-brand mr-3"></i> Intervention Rapide (sous 24/48h)</li>
+<li class="flex items-center text-gray-700"><i class="fa-solid fa-check text-brand mr-3"></i> Devis Gratuit et Transparent</li>
+<li class="flex items-center text-gray-700"><i class="fa-solid fa-check text-brand mr-3"></i> Conformité RE2020 &amp; normes en vigueur</li>
+<li class="flex items-center text-gray-700"><i class="fa-solid fa-check text-brand mr-3"></i> Satisfaction Client Garantie</li>
+</ul>
+<div class="flex items-center space-x-6">
+<a class="px-6 py-3 bg-brand hover:bg-brand-dark text-white font-semibold rounded-md transition duration-300" href="#services">En Savoir Plus</a>
+<div class="flex flex-col">
+<span class="font-bold text-xl text-brand">5.0</span>
+<div class="flex text-yellow-400 text-xs">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<span class="text-xs text-gray-500">82 avis Google</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== SERVICES SECTION ===== -->
+<section class="py-20 bg-brand" id="services">
+<div class="container mx-auto px-4 lg:px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12">
+<div>
+<div class="inline-flex items-center space-x-2 text-white/80 font-semibold text-xs tracking-wider uppercase mb-4">
+<span class="w-2 h-2 rounded-full bg-white"></span><span>NOS SERVICES</span>
+</div>
+<h2 class="text-3xl lg:text-4xl font-bold text-white max-w-lg">Solutions Complètes de Ventilation VMC</h2>
+</div>
+<a class="mt-6 md:mt-0 px-6 py-3 bg-white hover:bg-gray-100 text-brand font-semibold rounded-md transition duration-300 shrink-0" href="#">Voir Tous Les Services</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-xl group hover:-translate-y-2 transition duration-300">
+<div class="w-14 h-14 bg-brand/10 rounded-lg flex items-center justify-center text-brand text-2xl mb-6 group-hover:bg-brand group-hover:text-white transition duration-300">
+<i class="fa-solid fa-house-chimney"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-3">VMC Résidentielle</h3>
+<p class="text-gray-600 mb-6 text-sm">Installation et remplacement de VMC simple flux et double flux pour maisons et appartements en Île-de-France.</p>
+<a class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-brand hover:text-white transition duration-300" href="#">
+<i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+<div class="bg-white p-8 rounded-xl group hover:-translate-y-2 transition duration-300">
+<div class="w-14 h-14 bg-brand/10 rounded-lg flex items-center justify-center text-brand text-2xl mb-6 group-hover:bg-brand group-hover:text-white transition duration-300">
+<i class="fa-solid fa-arrows-rotate"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-3">Entretien &amp; Nettoyage</h3>
+<p class="text-gray-600 mb-6 text-sm">Nettoyage des bouches, remplacement des filtres et maintenance préventive pour garantir la longévité de votre VMC.</p>
+<a class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-brand hover:text-white transition duration-300" href="#">
+<i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+<div class="bg-white p-8 rounded-xl group hover:-translate-y-2 transition duration-300">
+<div class="w-14 h-14 bg-brand/10 rounded-lg flex items-center justify-center text-brand text-2xl mb-6 group-hover:bg-brand group-hover:text-white transition duration-300">
+<i class="fa-solid fa-building"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-3">VMC Professionnelle</h3>
+<p class="text-gray-600 mb-6 text-sm">Systèmes de ventilation pour bureaux, commerces, restaurants et locaux professionnels de toutes surfaces.</p>
+<a class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-brand hover:text-white transition duration-300" href="#">
+<i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== METHODOLOGY SECTION ===== -->
+<section class="py-20 md:py-32 bg-white" id="methodology">
+<div class="container mx-auto px-4 lg:px-8">
+<div class="flex flex-col lg:flex-row gap-16 items-center">
+<div class="lg:w-1/2">
+<div class="inline-flex items-center space-x-2 text-brand font-semibold text-xs tracking-wider uppercase mb-4">
+<span class="w-2 h-2 rounded-full bg-brand"></span><span>NOTRE MÉTHODE</span>
+</div>
+<h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Un Processus Simple et Efficace</h2>
+<p class="text-gray-600 mb-8 leading-relaxed">De la demande de devis à la mise en service de votre VMC, nous vous accompagnons à chaque étape avec professionnalisme et transparence.</p>
+<a class="inline-block px-6 py-3 bg-brand hover:bg-brand-dark text-white font-semibold rounded-md transition duration-300 mb-10" href="#realisations">Voir Nos Réalisations</a>
+<div class="h-80 overflow-hidden rounded-xl shadow-lg relative">
+<div class="absolute inset-0 bg-brand/10 z-10 mix-blend-multiply"></div>
+<img alt="professional ventilation technician" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+</div>
+</div>
+<div class="lg:w-1/2 relative">
+<div class="hidden md:block absolute left-6 top-10 bottom-10 w-0.5 bg-gray-100"></div>
+<div class="space-y-10 relative">
+<div class="flex items-start">
+<div class="w-12 h-12 rounded-full bg-brand/10 border-2 border-white shadow-sm flex items-center justify-center text-brand font-bold text-lg mr-6 shrink-0 relative z-10">01</div>
+<div class="pt-2">
+<h4 class="text-xl font-bold text-gray-900 mb-2">Demande de Devis</h4>
+<p class="text-gray-600 text-sm leading-relaxed">Contactez-nous par téléphone ou via notre formulaire en ligne pour nous décrire votre projet de ventilation VMC.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 rounded-full bg-white border-2 border-gray-100 flex items-center justify-center text-gray-400 font-bold text-lg mr-6 shrink-0 relative z-10 hover:border-brand hover:text-brand transition">02</div>
+<div class="pt-2">
+<h4 class="text-xl font-bold text-gray-900 mb-2">Étude Personnalisée</h4>
+<p class="text-gray-600 text-sm leading-relaxed">Notre expert évalue votre logement pour vous proposer la solution VMC la plus adaptée à votre configuration et à vos besoins.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 rounded-full bg-white border-2 border-gray-100 flex items-center justify-center text-gray-400 font-bold text-lg mr-6 shrink-0 relative z-10 hover:border-brand hover:text-brand transition">03</div>
+<div class="pt-2">
+<h4 class="text-xl font-bold text-gray-900 mb-2">Installation Rapide</h4>
+<p class="text-gray-600 text-sm leading-relaxed">Intervention soignée par nos techniciens qualifiés, dans le respect des normes RE2020 et des réglementations en vigueur.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 rounded-full bg-white border-2 border-gray-100 flex items-center justify-center text-gray-400 font-bold text-lg mr-6 shrink-0 relative z-10 hover:border-brand hover:text-brand transition">04</div>
+<div class="pt-2">
+<h4 class="text-xl font-bold text-gray-900 mb-2">Suivi &amp; Garantie</h4>
+<p class="text-gray-600 text-sm leading-relaxed">SAV réactif, contrats d'entretien et garanties constructeur pour assurer la performance et la longévité de votre VMC.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== PRODUCTS / VMC GRID SECTION ===== -->
+<section class="py-20 bg-gray-50" id="gammes">
+<div class="container mx-auto px-4 lg:px-8">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<div class="inline-flex items-center justify-center space-x-2 text-brand font-semibold text-xs tracking-wider uppercase mb-4">
+<span class="w-2 h-2 rounded-full bg-brand"></span><span>NOS VMC</span>
+</div>
+<h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Une Gamme Complète de VMC pour Tous Vos Besoins</h2>
+<p class="text-gray-600">Du système simple flux économique au double flux haute performance, trouvez la VMC parfaite pour votre logement ou local professionnel.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition duration-300 flex flex-col">
+<div class="h-48 overflow-hidden mb-6 flex items-center justify-center bg-gray-50 rounded-lg">
+<img alt="VMC simple flux autoréglable" class="w-full h-auto max-h-40 object-contain" src="images/urban-2.png"/>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">VMC Simple Flux Autoréglable</h3>
+<p class="text-sm text-gray-500 mb-6 flex-grow">Solution entrée de gamme fiable et économique. Idéale pour les logements neufs ou en rénovation avec un budget maîtrisé.</p>
+<ul class="space-y-2 mb-6 text-sm text-gray-700">
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Débit d'air constant</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Faible consommation électrique</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Installation rapide</li>
+</ul>
+<a class="block w-full text-center px-4 py-2.5 bg-brand/10 hover:bg-brand text-brand hover:text-white font-semibold rounded transition duration-300" href="#contact">Demander un Devis</a>
+</div>
+<div class="bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition duration-300 flex flex-col">
+<div class="h-48 overflow-hidden mb-6 flex items-center justify-center bg-gray-50 rounded-lg">
+<img alt="VMC simple flux hygroréglable" class="w-full h-auto max-h-40 object-contain" src="images/cube.png"/>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">VMC Simple Flux Hygroréglable</h3>
+<p class="text-sm text-gray-500 mb-6 flex-grow">Régulation automatique des débits selon le taux d'humidité. Confort optimisé et économies d'énergie.</p>
+<ul class="space-y-2 mb-6 text-sm text-gray-700">
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Bouches hygro Type A &amp; B</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Économies jusqu'à 50 %</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Silencieux (&lt; 25 dB)</li>
+</ul>
+<a class="block w-full text-center px-4 py-2.5 bg-brand/10 hover:bg-brand text-brand hover:text-white font-semibold rounded transition duration-300" href="#contact">Demander un Devis</a>
+</div>
+<div class="bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition duration-300 flex flex-col">
+<div class="h-48 overflow-hidden mb-6 flex items-center justify-center bg-gray-50 rounded-lg">
+<img alt="VMC double flux" class="w-full h-auto max-h-40 object-contain" src="images/purevent.png"/>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">VMC Double Flux</h3>
+<p class="text-sm text-gray-500 mb-6 flex-grow">Le haut de gamme de la ventilation. Récupération de chaleur jusqu'à 90 %, air filtré entrant, confort maximal.</p>
+<ul class="space-y-2 mb-6 text-sm text-gray-700">
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Récupération de chaleur ≥ 90 %</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Filtration de l'air entrant F7</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Idéal maisons BBC / RT2012</li>
+</ul>
+<a class="block w-full text-center px-4 py-2.5 bg-brand/10 hover:bg-brand text-brand hover:text-white font-semibold rounded transition duration-300" href="#contact">Demander un Devis</a>
+</div>
+<div class="bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition duration-300 flex flex-col">
+<div class="h-48 overflow-hidden mb-6 flex items-center justify-center bg-gray-50 rounded-lg">
+<img alt="VMC appartement" class="w-full h-auto max-h-40 object-contain" src="images/wally.webp"/>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">VMC pour Appartement</h3>
+<p class="text-sm text-gray-500 mb-6 flex-grow">Solution compacte et discrète spécialement conçue pour les appartements. Design ultra-plat, motorisation silencieuse.</p>
+<ul class="space-y-2 mb-6 text-sm text-gray-700">
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Design ultra-compact</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Moteur ECM basse consommation</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Compatible réseaux existants</li>
+</ul>
+<a class="block w-full text-center px-4 py-2.5 bg-brand/10 hover:bg-brand text-brand hover:text-white font-semibold rounded transition duration-300" href="#contact">Demander un Devis</a>
+</div>
+<div class="bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition duration-300 flex flex-col">
+<div class="h-48 overflow-hidden mb-6 flex items-center justify-center bg-gray-50 rounded-lg">
+<img alt="VMC tertiaire" class="w-full h-auto max-h-40 object-contain" src="images/pro-1000.webp"/>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">VMC Tertiaire &amp; Professionnelle</h3>
+<p class="text-sm text-gray-500 mb-6 flex-grow">Systèmes puissants pour bureaux, commerces, restaurants et locaux industriels de grande surface.</p>
+<ul class="space-y-2 mb-6 text-sm text-gray-700">
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Débit jusqu'à 10 000 m³/h</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Conformité ERP &amp; code du travail</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-2 text-xs"></i> Gestion centralisée GTB</li>
+</ul>
+<a class="block w-full text-center px-4 py-2.5 bg-brand/10 hover:bg-brand text-brand hover:text-white font-semibold rounded transition duration-300" href="#contact">Demander un Devis</a>
+</div>
+<div class="bg-brand rounded-xl p-8 shadow-sm flex flex-col items-center justify-center text-center text-white">
+<div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center text-3xl mb-6">
+<i class="fa-solid fa-wind"></i>
+</div>
+<h3 class="text-2xl font-bold mb-4">Besoin de Conseils ?</h3>
+<p class="text-white/80 mb-8 text-sm leading-relaxed">Nos experts VMC sont là pour vous aider à choisir la solution parfaitement adaptée à votre logement.</p>
+<a class="px-8 py-3 bg-white text-brand hover:bg-gray-100 font-bold rounded-md transition duration-300" href="#contact">Voir Toute la Gamme</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== EXCELLENCE SECTION ===== -->
+<section class="py-20 lg:py-32 bg-black text-white relative overflow-hidden" id="excellence">
+<div class="absolute right-0 top-0 w-full lg:w-1/2 h-full opacity-30 lg:opacity-100">
+<img alt="ventilation ductwork" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1621905252472-943afaa20e20?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent lg:via-black/20"></div>
+</div>
+<div class="container mx-auto px-4 lg:px-8 relative z-10">
+<div class="lg:w-1/2 lg:pr-12">
+<div class="inline-flex items-center space-x-2 text-brand font-semibold text-xs tracking-wider uppercase mb-4">
+<span class="w-2 h-2 rounded-full bg-brand"></span><span>POURQUOI NOUS CHOISIR</span>
+</div>
+<h2 class="text-3xl lg:text-5xl font-bold mb-12">L'Excellence au Service de Votre Qualité de l'Air</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
+<div>
+<div class="text-brand mb-3 text-xl"><i class="fa-solid fa-check-double"></i></div>
+<h4 class="font-bold text-lg mb-2">Expertise VMC Reconnue</h4>
+<p class="text-sm text-gray-400">Installateurs certifiés pour une maîtrise parfaite de tous les systèmes VMC simple et double flux.</p>
+</div>
+<div>
+<div class="text-brand mb-3 text-xl"><i class="fa-solid fa-bolt"></i></div>
+<h4 class="font-bold text-lg mb-2">Rapidité d'Intervention</h4>
+<p class="text-sm text-gray-400">Réponse sous 24h et installation dans les plus brefs délais partout en Île-de-France.</p>
+</div>
+<div>
+<div class="text-brand mb-3 text-xl"><i class="fa-solid fa-shield-halved"></i></div>
+<h4 class="font-bold text-lg mb-2">Tarifs Transparents</h4>
+<p class="text-sm text-gray-400">Devis détaillé et gratuit, sans frais cachés. Financement et aides MaPrimeRénov' disponibles.</p>
+</div>
+<div>
+<div class="text-brand mb-3 text-xl"><i class="fa-solid fa-heart"></i></div>
+<h4 class="font-bold text-lg mb-2">Satisfaction Client</h4>
+<p class="text-sm text-gray-400">Plus de 500 installations réalisées avec 100 % de clients satisfaits — note 5.0 Google.</p>
+</div>
+</div>
+<a class="text-brand hover:text-purple-300 font-semibold inline-flex items-center transition" href="#contact">
+          Besoin d'une intervention rapide ? <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+</a>
+</div>
+</div>
+</section>
+<!-- ===== GALLERY / REALISATIONS ===== -->
+<section class="py-20 bg-white" id="realisations">
+<div class="container mx-auto px-4 lg:px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12">
+<div>
+<div class="inline-flex items-center space-x-2 text-brand font-semibold text-xs tracking-wider uppercase mb-4">
+<span class="w-2 h-2 rounded-full bg-brand"></span><span>NOS RÉALISATIONS</span>
+</div>
+<h2 class="text-3xl lg:text-4xl font-bold text-gray-900 max-w-lg">Découvrez Nos Dernières Installations VMC</h2>
+</div>
+<a class="mt-6 md:mt-0 px-6 py-3 bg-brand hover:bg-brand-dark text-white font-semibold rounded-md transition duration-300 shrink-0" href="#">Voir Toutes les Réalisations</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="h-64 rounded-xl overflow-hidden group relative">
+<img alt="VMC installation Paris" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" src="images/cave.webp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+<h4 class="text-white font-bold text-lg">VMC Double Flux — Paris 15e</h4>
+<p class="text-purple-200 text-sm">Appartement 80 m²</p>
+</div>
+</div>
+<div class="h-64 rounded-xl overflow-hidden group relative">
+<img alt="VMC Boulogne" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" src="images/wally.webp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+<h4 class="text-white font-bold text-lg">VMC Simple Flux — Boulogne</h4>
+<p class="text-purple-200 text-sm">Maison individuelle 120 m²</p>
+</div>
+</div>
+<div class="h-64 rounded-xl overflow-hidden group relative">
+<img alt="VMC La Défense" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" src="images/urban-2.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+<h4 class="text-white font-bold text-lg">VMC Tertiaire — La Défense</h4>
+<p class="text-purple-200 text-sm">Bureaux 400 m²</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== STATS SECTION ===== -->
+<section class="py-12 bg-brand border-b border-brand-dark" id="stats">
+<div class="container mx-auto px-4 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/20">
+<div class="px-4">
+<div class="text-3xl md:text-4xl font-bold text-white mb-2">5.0/5</div>
+<div class="text-sm text-white/70">Note Google</div>
+</div>
+<div class="px-4">
+<div class="text-3xl md:text-4xl font-bold text-white mb-2">500+</div>
+<div class="text-sm text-white/70">Installations VMC</div>
+</div>
+<div class="px-4">
+<div class="text-3xl md:text-4xl font-bold text-white mb-2">24h</div>
+<div class="text-sm text-white/70">Délai d'intervention</div>
+</div>
+<div class="px-4">
+<div class="text-3xl md:text-4xl font-bold text-white mb-2">100%</div>
+<div class="text-sm text-white/70">Clients Satisfaits</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== TESTIMONIALS ===== -->
+<section class="py-20 bg-gray-50 overflow-hidden" id="temoignages">
+<div class="container mx-auto px-4 lg:px-8">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<div class="inline-flex items-center justify-center space-x-2 text-brand font-semibold text-xs tracking-wider uppercase mb-4">
+<span class="w-2 h-2 rounded-full bg-brand"></span><span>TÉMOIGNAGES</span>
+</div>
+<h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Ce Que Disent Nos Clients</h2>
+<p class="text-gray-500 text-sm">82 avis Google — Note moyenne : 5.0 / 5</p>
+</div>
+</div>
+<div class="relative">
+<div class="overflow-hidden">
+<div id="temoignages-marquee">
+<!-- Original set -->
+<div class="flex-none w-[420px] mx-4 bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+<div class="text-brand/10 text-6xl absolute top-6 right-8"><i class="fa-solid fa-quote-right"></i></div>
+<p class="text-gray-600 mb-6 relative z-10 italic">"Équipe très professionnelle, travail soigné et rapide. Ils ont installé notre VMC double flux en une journée. Installation propre et silencieuse. Je recommande vivement Pilotech-VMI !"</p>
+<div class="flex text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<div class="flex items-center"><img class="w-12 h-12 rounded-full object-cover mr-4" src="https://i.pravatar.cc/150?img=2"/><div><h4 class="font-bold text-gray-900">Michel Bertrand</h4><p class="text-xs text-gray-500">VMC Double Flux — Paris 14e</p></div></div>
+</div>
+<div class="flex-none w-[420px] mx-4 bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+<div class="text-brand/10 text-6xl absolute top-6 right-8"><i class="fa-solid fa-quote-right"></i></div>
+<p class="text-gray-600 mb-6 relative z-10 italic">"Excellente expérience de A à Z. Devis clair reçu sous 24h, tarifs compétitifs, et techniciens très courtois. Notre VMC hygroréglable fonctionne parfaitement. Merci !"</p>
+<div class="flex text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<div class="flex items-center"><img class="w-12 h-12 rounded-full object-cover mr-4" src="https://i.pravatar.cc/150?img=5"/><div><h4 class="font-bold text-gray-900">Sophie Villeneuve</h4><p class="text-xs text-gray-500">VMC Hygroréglable — Versailles</p></div></div>
+</div>
+<div class="flex-none w-[420px] mx-4 bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+<div class="text-brand/10 text-6xl absolute top-6 right-8"><i class="fa-solid fa-quote-right"></i></div>
+<p class="text-gray-600 mb-6 relative z-10 italic">"Intervention rapide et soignée pour l'installation de la VMC dans notre bureau. Le technicien était très pédagogue et le suivi après-vente est excellent."</p>
+<div class="flex text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<div class="flex items-center"><img class="w-12 h-12 rounded-full object-cover mr-4" src="https://i.pravatar.cc/150?img=3"/><div><h4 class="font-bold text-gray-900">Thomas Leroux</h4><p class="text-xs text-gray-500">VMC Tertiaire — Bureaux, Paris 8e</p></div></div>
+</div>
+<div class="flex-none w-[420px] mx-4 bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+<div class="text-brand/10 text-6xl absolute top-6 right-8"><i class="fa-solid fa-quote-right"></i></div>
+<p class="text-gray-600 mb-6 relative z-10 italic">"Très satisfait de la pose de la VMC dans notre maison. L'humidité a disparu et les nuisances sonores sont inexistantes. Bravo à toute l'équipe Pilotech-VMI !"</p>
+<div class="flex text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<div class="flex items-center"><img class="w-12 h-12 rounded-full object-cover mr-4" src="https://i.pravatar.cc/150?img=4"/><div><h4 class="font-bold text-gray-900">Laurent Bonnet</h4><p class="text-xs text-gray-500">VMC Simple Flux — Vincennes</p></div></div>
+</div>
+<div class="flex-none w-[420px] mx-4 bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+<div class="text-brand/10 text-6xl absolute top-6 right-8"><i class="fa-solid fa-quote-right"></i></div>
+<p class="text-gray-600 mb-6 relative z-10 italic">"Installation de VMC double flux dans notre appartement neuf. Résultat impeccable, air filtré, et la récupération de chaleur se ressent vraiment sur nos factures énergétiques."</p>
+<div class="flex text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<div class="flex items-center"><img class="w-12 h-12 rounded-full object-cover mr-4" src="https://i.pravatar.cc/150?img=6"/><div><h4 class="font-bold text-gray-900">Isabelle Moreau</h4><p class="text-xs text-gray-500">VMC Double Flux — Appartement, Boulogne</p></div></div>
+</div>
+<div class="flex-none w-[420px] mx-4 bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+<div class="text-brand/10 text-6xl absolute top-6 right-8"><i class="fa-solid fa-quote-right"></i></div>
+<p class="text-gray-600 mb-6 relative z-10 italic">"Service irréprochable du début à la fin. Devis reçu le jour même, installation soignée et le résultat est parfait. L'air dans notre maison est vraiment plus sain."</p>
+<div class="flex text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<div class="flex items-center"><img class="w-12 h-12 rounded-full object-cover mr-4" src="https://i.pravatar.cc/150?img=7"/><div><h4 class="font-bold text-gray-900">Nathalie Dupuis</h4><p class="text-xs text-gray-500">VMC Résidentielle — Neuilly-sur-Seine</p></div></div>
+</div>
+<!-- Duplicate set for seamless loop -->
+<div class="flex-none w-[420px] mx-4 bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+<div class="text-brand/10 text-6xl absolute top-6 right-8"><i class="fa-solid fa-quote-right"></i></div>
+<p class="text-gray-600 mb-6 relative z-10 italic">"Équipe très professionnelle, travail soigné et rapide. Ils ont installé notre VMC double flux en une journée. Installation propre et silencieuse. Je recommande vivement Pilotech-VMI !"</p>
+<div class="flex text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<div class="flex items-center"><img class="w-12 h-12 rounded-full object-cover mr-4" src="https://i.pravatar.cc/150?img=2"/><div><h4 class="font-bold text-gray-900">Michel Bertrand</h4><p class="text-xs text-gray-500">VMC Double Flux — Paris 14e</p></div></div>
+</div>
+<div class="flex-none w-[420px] mx-4 bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+<div class="text-brand/10 text-6xl absolute top-6 right-8"><i class="fa-solid fa-quote-right"></i></div>
+<p class="text-gray-600 mb-6 relative z-10 italic">"Excellente expérience de A à Z. Devis clair reçu sous 24h, tarifs compétitifs, et techniciens très courtois. Notre VMC hygroréglable fonctionne parfaitement. Merci !"</p>
+<div class="flex text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<div class="flex items-center"><img class="w-12 h-12 rounded-full object-cover mr-4" src="https://i.pravatar.cc/150?img=5"/><div><h4 class="font-bold text-gray-900">Sophie Villeneuve</h4><p class="text-xs text-gray-500">VMC Hygroréglable — Versailles</p></div></div>
+</div>
+<div class="flex-none w-[420px] mx-4 bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+<div class="text-brand/10 text-6xl absolute top-6 right-8"><i class="fa-solid fa-quote-right"></i></div>
+<p class="text-gray-600 mb-6 relative z-10 italic">"Intervention rapide et soignée pour l'installation de la VMC dans notre bureau. Le technicien était très pédagogue et le suivi après-vente est excellent."</p>
+<div class="flex text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<div class="flex items-center"><img class="w-12 h-12 rounded-full object-cover mr-4" src="https://i.pravatar.cc/150?img=3"/><div><h4 class="font-bold text-gray-900">Thomas Leroux</h4><p class="text-xs text-gray-500">VMC Tertiaire — Bureaux, Paris 8e</p></div></div>
+</div>
+<div class="flex-none w-[420px] mx-4 bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+<div class="text-brand/10 text-6xl absolute top-6 right-8"><i class="fa-solid fa-quote-right"></i></div>
+<p class="text-gray-600 mb-6 relative z-10 italic">"Très satisfait de la pose de la VMC dans notre maison. L'humidité a disparu et les nuisances sonores sont inexistantes. Bravo à toute l'équipe Pilotech-VMI !"</p>
+<div class="flex text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<div class="flex items-center"><img class="w-12 h-12 rounded-full object-cover mr-4" src="https://i.pravatar.cc/150?img=4"/><div><h4 class="font-bold text-gray-900">Laurent Bonnet</h4><p class="text-xs text-gray-500">VMC Simple Flux — Vincennes</p></div></div>
+</div>
+<div class="flex-none w-[420px] mx-4 bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+<div class="text-brand/10 text-6xl absolute top-6 right-8"><i class="fa-solid fa-quote-right"></i></div>
+<p class="text-gray-600 mb-6 relative z-10 italic">"Installation de VMC double flux dans notre appartement neuf. Résultat impeccable, air filtré, et la récupération de chaleur se ressent vraiment sur nos factures énergétiques."</p>
+<div class="flex text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<div class="flex items-center"><img class="w-12 h-12 rounded-full object-cover mr-4" src="https://i.pravatar.cc/150?img=6"/><div><h4 class="font-bold text-gray-900">Isabelle Moreau</h4><p class="text-xs text-gray-500">VMC Double Flux — Appartement, Boulogne</p></div></div>
+</div>
+<div class="flex-none w-[420px] mx-4 bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative">
+<div class="text-brand/10 text-6xl absolute top-6 right-8"><i class="fa-solid fa-quote-right"></i></div>
+<p class="text-gray-600 mb-6 relative z-10 italic">"Service irréprochable du début à la fin. Devis reçu le jour même, installation soignée et le résultat est parfait. L'air dans notre maison est vraiment plus sain."</p>
+<div class="flex text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<div class="flex items-center"><img class="w-12 h-12 rounded-full object-cover mr-4" src="https://i.pravatar.cc/150?img=7"/><div><h4 class="font-bold text-gray-900">Nathalie Dupuis</h4><p class="text-xs text-gray-500">VMC Résidentielle — Neuilly-sur-Seine</p></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== CONTACT SECTION ===== -->
+<section class="py-20 md:py-32 bg-white" id="contact">
+<div class="container mx-auto px-4 lg:px-8 max-w-6xl">
+<div class="text-center mb-16">
+<div class="inline-flex items-center justify-center space-x-2 text-brand font-semibold text-xs tracking-wider uppercase mb-4">
+<span class="w-2 h-2 rounded-full bg-brand"></span><span>NOUS CONTACTER</span>
+</div>
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Envoyez-nous un Message</h2>
+<p class="text-gray-500 max-w-2xl mx-auto text-sm md:text-base">Une question, un projet ou besoin d'un devis ? Remplissez le formulaire ci-dessous et notre équipe vous répondra sous 24h.</p>
+</div>
+<div class="flex flex-col lg:flex-row rounded-3xl overflow-hidden bg-[#FAFAFA] border border-gray-100 shadow-sm">
+<!-- Left Panel -->
+<div class="lg:w-2/5 bg-brand p-8 md:p-12 text-white flex flex-col justify-between rounded-3xl m-2">
+<div>
+<h3 class="text-2xl font-bold mb-4">Informations de Contact</h3>
+<p class="text-white/80 text-sm mb-10 leading-relaxed">Nous sommes à votre disposition pour répondre à toutes vos questions concernant nos services VMC.</p>
+<div class="space-y-8">
+<div class="flex items-start">
+<div class="w-10 h-10 bg-white/10 rounded flex items-center justify-center mr-4 shrink-0"><i class="fa-solid fa-location-dot"></i></div>
+<div>
+<h4 class="font-bold text-sm mb-1">Adresse</h4>
+<p class="text-white/80 leading-relaxed text-sm">123 Avenue de la République<br/>75011 Paris, France</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 bg-white/10 rounded flex items-center justify-center mr-4 shrink-0"><i class="fa-solid fa-phone"></i></div>
+<div>
+<h4 class="font-bold text-sm mb-1">Téléphone</h4>
+<a class="text-white/80 hover:text-white transition text-sm" href="tel:0184000000">01 84 00 00 00</a>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 bg-white/10 rounded flex items-center justify-center mr-4 shrink-0"><i class="fa-solid fa-envelope"></i></div>
+<div>
+<h4 class="font-bold text-sm mb-1">Email</h4>
+<a class="text-white/80 hover:text-white transition text-sm" href="mailto:contact@pilotech.fr">contact@pilotech.fr</a>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 bg-white/10 rounded flex items-center justify-center mr-4 shrink-0"><i class="fa-solid fa-clock"></i></div>
+<div>
+<h4 class="font-bold text-sm mb-1">Horaires</h4>
+<p class="text-white/80 leading-relaxed text-sm">Lun – Ven : 8h00 – 18h00<br/>Sam : 9h00 – 13h00</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-white/10">
+<div class="flex items-center">
+<div class="flex text-yellow-400 text-sm mr-3">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<span class="font-bold mr-2">5.0</span><span class="text-white/80 text-sm">— 82 avis Google</span>
+</div>
+</div>
+</div>
+<!-- Right Panel: Form -->
+<div class="lg:w-3/5 p-8 md:p-12 lg:p-16">
+<h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2">Envoyez votre message</h3>
+<p class="text-sm text-gray-500 mb-8">Tous les champs marqués d'un * sont obligatoires.</p>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs font-semibold text-gray-600 uppercase mb-2">Nom Complet *</label>
+<input class="w-full px-4 py-3 rounded border border-gray-200 focus:ring-2 focus:ring-brand focus:border-transparent outline-none transition text-sm bg-white" placeholder="Jean Dupont" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-semibold text-gray-600 uppercase mb-2">Adresse Email *</label>
+<input class="w-full px-4 py-3 rounded border border-gray-200 focus:ring-2 focus:ring-brand focus:border-transparent outline-none transition text-sm bg-white" placeholder="jean@exemple.fr" type="email"/>
+</div>
+<div>
+<label class="block text-xs font-semibold text-gray-600 uppercase mb-2">Téléphone</label>
+<input class="w-full px-4 py-3 rounded border border-gray-200 focus:ring-2 focus:ring-brand focus:border-transparent outline-none transition text-sm bg-white" placeholder="06 12 34 56 78" type="tel"/>
+</div>
+<div>
+<label class="block text-xs font-semibold text-gray-600 uppercase mb-2">Sujet *</label>
+<select class="w-full px-4 py-3 rounded border border-gray-200 focus:ring-2 focus:ring-brand focus:border-transparent outline-none transition text-sm bg-white appearance-none">
+<option disabled="" selected="" value="">Choisissez un sujet</option>
+<option>Demande de devis</option>
+<option>Demande d'information</option>
+<option>Service après-vente</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block text-xs font-semibold text-gray-600 uppercase mb-3">Type de logement *</label>
+<div class="flex flex-wrap gap-4">
+<label class="flex items-center cursor-pointer"><input class="w-4 h-4 text-brand focus:ring-brand border-gray-300" name="property_type" type="radio" value="appartement"/><span class="ml-2 text-sm text-gray-600">Appartement</span></label>
+<label class="flex items-center cursor-pointer"><input class="w-4 h-4 text-brand focus:ring-brand border-gray-300" name="property_type" type="radio" value="maison"/><span class="ml-2 text-sm text-gray-600">Maison</span></label>
+<label class="flex items-center cursor-pointer"><input class="w-4 h-4 text-brand focus:ring-brand border-gray-300" name="property_type" type="radio" value="pro"/><span class="ml-2 text-sm text-gray-600">Local professionnel</span></label>
+<label class="flex items-center cursor-pointer"><input class="w-4 h-4 text-brand focus:ring-brand border-gray-300" name="property_type" type="radio" value="autre"/><span class="ml-2 text-sm text-gray-600">Autre</span></label>
+</div>
+</div>
+<div>
+<label class="block text-xs font-semibold text-gray-600 uppercase mb-2">Votre Message *</label>
+<textarea class="w-full px-4 py-3 rounded border border-gray-200 focus:ring-2 focus:ring-brand focus:border-transparent outline-none transition text-sm bg-white resize-none" placeholder="Décrivez votre projet ou votre besoin en détail..." rows="4"></textarea>
+</div>
+<div class="flex items-start">
+<input class="w-4 h-4 mt-0.5 text-brand rounded border-gray-300 focus:ring-brand" type="checkbox"/>
+<label class="ml-3 text-xs text-gray-500 leading-relaxed cursor-pointer">J'accepte que mes données personnelles soient utilisées par Pilotech-VMI pour répondre à ma demande, conformément à la politique de confidentialité.</label>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center gap-4 mt-8">
+<button class="inline-flex justify-center items-center px-8 py-3.5 bg-brand hover:bg-brand-dark text-white font-semibold rounded transition duration-300 shadow-sm" type="submit">
+<i class="fa-solid fa-paper-plane mr-2"></i> Envoyer le message
+              </button>
+<div class="flex items-center text-xs text-gray-400"><i class="fa-solid fa-lock mr-2 text-gray-300"></i> Vos données sont sécurisées et ne seront jamais partagées.</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-gray-900 text-white" id="footer">
+<div class="border-b border-gray-800">
+<div class="container mx-auto px-4 lg:px-8 py-12">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<div class="mb-6 md:mb-0">
+<h3 class="text-2xl font-bold mb-2">Besoin d'un devis pour votre projet ?</h3>
+<p class="text-gray-400">Contactez-nous pour une étude personnalisée et gratuite.</p>
+</div>
+<a class="px-8 py-4 bg-brand hover:bg-brand-dark text-white font-bold rounded-md transition duration-300" href="gammes.html">Demander un Devis Gratuit</a>
+</div>
+</div>
+</div>
+<div class="container mx-auto px-4 lg:px-8 py-16">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div>
+<a class="text-2xl font-bold flex items-center space-x-2 mb-6" href="index.html">
+<span class="w-8 h-8 rounded-full bg-brand flex items-center justify-center text-white text-sm"><i class="fa-solid fa-wind"></i></span>
+<span class="text-white tracking-tight">Pilotech-VMI</span>
+</a>
+<p class="text-gray-400 text-sm mb-6 leading-relaxed">Spécialiste de la ventilation mécanique contrôlée (VMC/VMI) en Île-de-France. Installateur certifié.</p>
+<div class="flex space-x-4">
+<a class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brand hover:text-white transition" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+<a class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brand hover:text-white transition" href="#"><i class="fa-brands fa-instagram"></i></a>
+<a class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brand hover:text-white transition" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Nos gammes</h4>
+<ul class="space-y-3 text-sm text-gray-400 grid grid-cols-2">
+<li><a class="hover:text-brand transition" href="wally.html">Wally</a></li>
+<li><a class="hover:text-brand transition" href="lofty.html">Lofty</a></li>
+<li><a class="hover:text-brand transition" href="pro-1000.html">Pro 1000</a></li>
+<li><a class="hover:text-brand transition" href="cave.html">Cave</a></li>
+<li><a class="hover:text-brand transition" href="cube.html">Cube</a></li>
+<li><a class="hover:text-brand transition" href="urban-2.html">Urban 2</a></li>
+<li><a class="hover:text-brand transition" href="purevent.html">Purevent</a></li>
+<li><a class="hover:text-brand transition" href="gammes.html">Tout voir</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Entreprise</h4>
+<ul class="space-y-3 text-sm text-gray-400">
+<li><a class="hover:text-brand transition" href="a-propos.html">À Propos</a></li>
+<li><a class="hover:text-brand transition" href="index.html#realisations">Nos Réalisations</a></li>
+<li><a class="hover:text-brand transition" href="blog.html">Blog &amp; Actualités</a></li>
+<li><a class="hover:text-brand transition" href="index.html#contact">Contact</a></li>
+</ul>
+</div>
+<div id="contact">
+<h4 class="text-lg font-bold mb-6">Contact</h4>
+<ul class="space-y-4 text-sm text-gray-400">
+<li class="flex items-start">
+<i class="fa-solid fa-location-dot text-brand mt-1 mr-3"></i>
+<span>123 Avenue de la République<br/>75011 Paris, France</span>
+</li>
+<li class="flex items-center">
+<i class="fa-solid fa-phone text-brand mr-3"></i>
+<span>01 85 44 12 53</span>
+</li>
+<li class="flex items-center">
+<i class="fa-solid fa-envelope text-brand mr-3"></i>
+<span>info@pilotech.eu</span>
+</li>
+<li class="flex items-start">
+<i class="fa-solid fa-clock text-brand mr-3 mt-0.5"></i>
+<span>Lun – Ven : 8h00 – 18h00<br/>Sam : 9h00 – 13h00</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+<p>© 2026 Pilotech-VMI. Tous droits réservés.</p>
+<div class="flex space-x-4 mt-4 md:mt-0">
+<a class="hover:text-white transition" href="#">Mentions Légales</a>
+<a class="hover:text-white transition" href="#">Politique de Confidentialité</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

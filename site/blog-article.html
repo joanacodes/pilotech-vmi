@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Article - Pilotech-VMI</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script>
+    window.FontAwesomeConfig = {
+      autoReplaceSvg: 'nest'
+    };
+  </script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script crossorigin="anonymous" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              DEFAULT: '#57368C',
+              dark: '#442a6d',
+              light: '#f5f3f9'
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    ::-webkit-scrollbar { display: none; }
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: block; }
+  </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex w-full shadow-sm bg-white" id="header">
+<div class="hidden lg:flex w-64 items-center justify-center bg-white border-r border-gray-100">
+<a class="text-2xl font-bold flex items-center space-x-2" href="index.html">
+<i class="fa-solid fa-wind text-brand text-2xl"></i>
+<span class="text-gray-900 tracking-tight">Pilotech<span class="text-brand font-extrabold">-VMI</span></span>
+</a>
+</div>
+<div class="flex-1 flex flex-col border-l border-gray-100">
+<div class="lg:flex px-8 py-2 text-xs font-medium text-gray-500 border-b border-gray-100 items-center flex flex-row justify-between hidden">
+<div class="flex space-x-4 mr-6 justify-between items-center">
+<a class="hover:text-brand transition flex items-center" href="tel:0185441253">
+<i class="fa-solid fa-phone mr-2 text-gray-400"></i> 01 85 44 12 53
+          </a>
+<span class="text-gray-300">|</span>
+<a class="hover:text-brand transition flex items-center" href="mailto:info@pilotech.eu">
+<i class="fa-solid fa-paper-plane mr-2 text-gray-400"></i> info@pilotech.eu
+          </a>
+<span class="text-gray-300">|</span>
+<span class="flex items-center">
+<i class="fa-solid fa-star text-brand mr-2"></i> 5/5 — 82 avis Google
+          </span>
+</div>
+<div class="flex items-center space-x-4 pl-4 border-l border-gray-100 text-sm">
+<a class="hover:text-brand transition text-gray-700" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+<a class="hover:text-brand transition text-gray-700" href="#"><i class="fa-brands fa-instagram"></i></a>
+<a class="hover:text-brand transition text-gray-700" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+</div>
+</div>
+<div class="flex justify-between items-center px-4 lg:px-8 py-4 lg:py-3">
+<a class="lg:hidden text-xl font-bold flex items-center space-x-2" href="index.html">
+<i class="fa-solid fa-wind text-brand"></i>
+<span class="text-gray-900 tracking-tight">Pilotech<span class="text-brand font-extrabold">-VMI</span></span>
+</a>
+<nav class="hidden lg:flex items-center space-x-8 font-semibold text-gray-700 text-sm">
+<a class="text-brand border-b-2 border-brand pb-1" href="index.html">Accueil</a>
+<a class="hover:text-brand transition pb-1" href="a-propos.html">À propos</a>
+<a class="hover:text-brand transition pb-1" href="gammes.html">Gammes VMI</a>
+<a class="hover:text-brand transition pb-1" href="index.html#realisations">Réalisations</a>
+<a class="hover:text-brand transition pb-1" href="index.html#temoignages">Témoignages</a>
+<a class="hover:text-brand transition pb-1" href="index.html#contact">Contact</a>
+</nav>
+<div class="flex items-center space-x-4 lg:hidden">
+<a class="px-4 py-2 bg-brand text-white font-semibold rounded text-sm" href="index.html#contact">Devis</a>
+<button class="text-gray-600 text-2xl focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"><i class="fa-solid fa-bars"></i></button>
+</div>
+</div>
+<div class="hidden lg:hidden px-4 pb-4 flex flex-col space-y-3 font-semibold text-gray-700 text-sm border-t border-gray-100 pt-4" id="mobile-menu">
+<a class="hover:text-brand transition" href="index.html">Accueil</a><a class="hover:text-brand transition" href="a-propos.html">À propos</a><a class="hover:text-brand transition" href="gammes.html">Gammes VMI</a><a class="hover:text-brand transition" href="index.html#realisations">Réalisations</a><a class="hover:text-brand transition" href="index.html#temoignages">Témoignages</a><a class="hover:text-brand transition" href="index.html#contact">Contact</a>
+</div>
+</div>
+<div class="hidden lg:flex w-64 bg-gray-950 items-center justify-center">
+<a class="inline-flex items-center justify-center px-6 py-2.5 bg-brand hover:bg-brand-dark text-white font-semibold rounded transition duration-300" href="index.html#contact">
+<i class="fa-solid fa-file-invoice mr-2"></i> Devis Gratuit
+      </a>
+</div>
+</header>
+<!-- Mobile Menu -->
+<div class="lg:hidden bg-white border-t border-gray-100 px-4 pb-6 w-full shadow-lg z-40 relative" id="mobile-menu">
+<nav class="flex flex-col divide-y divide-gray-100 text-sm font-semibold text-gray-700">
+<a class="py-3 hover:text-brand transition" href="#">Home</a>
+<a class="py-3 hover:text-brand transition" href="#">About Us</a>
+<a class="py-3 hover:text-brand transition" href="#">Services</a>
+<a class="py-3 hover:text-brand transition" href="#">Projects</a>
+<a class="py-3 hover:text-brand transition" href="#">Pages</a>
+<a class="py-3 text-brand" href="#">Blog</a>
+<a class="py-3 hover:text-brand transition" href="#">Pricing</a>
+<div class="pt-4">
+<a class="block w-full text-center px-6 py-3 bg-brand text-white font-bold rounded-lg transition text-sm" href="#">
+          Free Quote
+        </a>
+</div>
+</nav>
+</div>
+<!-- Hero Post Title Section -->
+<section class="bg-white pt-16 pb-12 text-center px-4 border-b border-gray-100" id="post-hero">
+<div class="container mx-auto max-w-4xl">
+<div class="flex items-center justify-center space-x-3 text-xs font-medium mb-6">
+<span class="border border-brand/20 bg-brand/5 text-brand px-3 py-1 rounded-full font-semibold">Compliance</span>
+<span class="text-gray-400"><i class="fa-regular fa-calendar mr-1"></i> June 25, 2025</span>
+</div>
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">Smart home technology for<br/>efficiency</h1>
+</div>
+</section>
+<!-- Hero Image & Author -->
+<section class="bg-white" id="post-image">
+<div class="w-full">
+<img alt="wide shot of a modern, luxurious living room with large floor-to-ceiling windows showing green trees" class="w-full h-auto max-h-[600px] object-cover" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+</div>
+<div class="container mx-auto max-w-4xl px-4 py-6 border-b border-gray-100 flex flex-col sm:flex-row justify-between items-center bg-white">
+<div class="flex items-center mb-4 sm:mb-0">
+<img alt="Jane Smith" class="w-12 h-12 rounded-full mr-4 object-cover border-2 border-brand/20" src="https://i.pravatar.cc/150?img=6"/>
+<div>
+<h4 class="font-bold text-gray-900">Jane Smith</h4>
+<p class="text-xs text-gray-500">Renovator of Pilotech</p>
+</div>
+</div>
+<div class="flex items-center space-x-6 text-sm font-medium text-gray-400">
+<span><i class="fa-regular fa-clock mr-1 text-brand"></i>10 Min. Read</span>
+<span class="text-gray-200">|</span>
+<span><i class="fa-regular fa-calendar mr-1 text-brand"></i>June 25, 2025</span>
+</div>
+</div>
+</section>
+<!-- Article Content -->
+<section class="py-16 bg-gray-50" id="post-content">
+<div class="container mx-auto max-w-3xl px-4">
+<p class="text-gray-500 text-[15px] leading-relaxed mb-10">
+        When it comes to electrical work, safety and efficiency are key. Hiring a skilled electrician is vital to ensuring that your electrical systems are properly installed and maintained. Not only does this help to avoid potential hazards like electrical fires and shocks, but it also guarantees that your home or business runs smoothly and efficiently.
+      </p>
+<h2 class="text-2xl font-bold text-gray-900 mb-4">Common Electrical Issues</h2>
+<p class="text-gray-500 text-[15px] leading-relaxed mb-6">
+        A variety of electrical issues, such as flickering lights, tripped breakers, and malfunctioning outlets, are encountered by homeowners, overloaded circuits, or antiquated wiring.
+      </p>
+<ul class="space-y-3 text-gray-700 font-medium text-[15px] mb-10">
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-3 text-sm"></i> Communication and Connectivity</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-3 text-sm"></i> Technological Innovation</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-3 text-sm"></i> Agricultural Productivity</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-3 text-sm"></i> Quality of Life</li>
+<li class="flex items-center"><i class="fa-solid fa-check text-brand mr-3 text-sm"></i> Economic Growth</li>
+</ul>
+<h2 class="text-xl font-bold text-gray-900 mb-4">Benefits of Regular Electrical Maintenance</h2>
+<p class="text-gray-500 text-[15px] leading-relaxed mb-8">
+        Your electrical system's lifespan and efficiency can be greatly increased with routine maintenance. Electrical systems need to be inspected on a regular basis to detect wear and tear, outdated parts, or safety issues, just like any other portion of your house.
+      </p>
+<!-- Quote Block -->
+<div class="bg-brand text-white p-10 rounded-2xl mb-12 text-center relative overflow-hidden">
+<div class="absolute top-4 left-6 text-white/10 text-8xl leading-none"><i class="fa-solid fa-quote-left"></i></div>
+<i class="fa-solid fa-quote-left text-3xl mb-4 text-white/60 relative z-10"></i>
+<p class="text-lg font-medium leading-relaxed italic px-4 relative z-10">"Regular electrical maintenance enhances safety, prevents failures, and extends system lifespan, ensuring efficiency, reliability, and peace of mind for your home or business."</p>
+</div>
+<h2 class="text-xl font-bold text-gray-900 mb-4">Upgrading Your Electrical System for Efficiency</h2>
+<p class="text-gray-500 text-[15px] leading-relaxed mb-8">
+        It makes financial sense to upgrade your electrical system in the energy-conscious world of today. The power requirements of appliances and technologies capacity of older systems.
+      </p>
+<!-- Content Image -->
+<div class="mb-12 rounded-2xl overflow-hidden shadow-sm">
+<img alt="electrician in orange and black plaid shirt working on wires in electrical box, medium shot, realist" class="w-full h-auto max-h-[400px] object-cover" src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+</div>
+<h2 class="text-xl font-bold text-gray-900 mb-4">Choosing the Right Electrician for Your Needs</h2>
+<p class="text-gray-500 text-[15px] leading-relaxed mb-12">
+        It can be difficult to choose the best electrician for your job. It's crucial to do your research, read reviews, and verify credentials. Seek out electricians that are insured, licensed, and have a solid reputation in your neighborhood.
+      </p>
+<!-- Share & Tags -->
+<div class="flex flex-col sm:flex-row justify-between items-center border-t border-gray-200 pt-6 mt-8">
+<span class="font-bold text-sm text-gray-900 mb-4 sm:mb-0">Share This Story, Choose Your Platform!</span>
+<div class="flex items-center space-x-3">
+<a class="w-9 h-9 rounded-full bg-brand/10 hover:bg-brand text-brand hover:text-white flex items-center justify-center transition" href="#"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+<a class="w-9 h-9 rounded-full bg-brand/10 hover:bg-brand text-brand hover:text-white flex items-center justify-center transition" href="#"><i class="fa-brands fa-instagram text-sm"></i></a>
+<a class="w-9 h-9 rounded-full bg-brand/10 hover:bg-brand text-brand hover:text-white flex items-center justify-center transition" href="#"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+<a class="w-9 h-9 rounded-full bg-brand/10 hover:bg-brand text-brand hover:text-white flex items-center justify-center transition" href="#"><i class="fa-brands fa-pinterest-p text-sm"></i></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Related Articles -->
+<section class="py-20 bg-white" id="related-articles">
+<div class="container mx-auto px-4 lg:px-8 max-w-5xl">
+<div class="flex flex-col md:flex-row justify-between items-end mb-10">
+<div>
+<div class="inline-flex items-center space-x-2 text-brand font-semibold text-xs uppercase tracking-wider mb-3">
+<span class="w-2 h-2 rounded-full bg-brand"></span>
+<span>Our Blogs</span>
+</div>
+<h2 class="text-3xl font-bold text-gray-900">Related Articles</h2>
+</div>
+<a class="mt-4 md:mt-0 px-6 py-2.5 bg-brand hover:bg-brand-dark text-white font-semibold rounded-lg text-sm transition" href="#">Browse All Posts</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Card 1 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group flex flex-col h-full relative p-2" id="related-card-1">
+<div class="h-64 rounded-xl overflow-hidden bg-gray-100 relative">
+<img alt="electrician working on home electrical wiring panel, side view profile, realistic photography" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+</div>
+<div class="p-6 relative bg-white -mt-16 mx-4 rounded-xl shadow-md border border-gray-50 z-10 flex-grow">
+<div class="flex items-center space-x-3 text-[11px] font-semibold text-gray-400 mb-3 uppercase tracking-wide">
+<span class="text-brand font-bold">Protection</span>
+<span class="inline-block w-1 h-1 bg-gray-300 rounded-full"></span>
+<span><i class="fa-regular fa-calendar mr-1"></i> June 23, 2025</span>
+</div>
+<h3 class="text-lg font-bold text-gray-900 mb-2 leading-snug group-hover:text-brand transition">Common Electrical Problems And Solutions</h3>
+<p class="text-gray-500 text-sm">Identify and resolve common electrical issues effectively and efficiently.</p>
+<div class="mt-4">
+<a class="inline-flex items-center text-brand font-semibold text-xs hover:underline" href="#">Read More <i class="fa-solid fa-arrow-right ml-1 text-[10px]"></i></a>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group flex flex-col h-full relative p-2" id="related-card-2">
+<div class="h-64 rounded-xl overflow-hidden bg-gray-100 relative flex items-end justify-center">
+<img alt="portrait of a male electrician wearing a bright blue hard hat looking forward, close up shot, bright" class="w-full h-full object-cover transition duration-500 group-hover:scale-105 object-top" src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+</div>
+<div class="p-6 relative bg-white -mt-16 mx-4 rounded-xl shadow-md border border-gray-50 z-10 flex-grow">
+<div class="flex items-center space-x-3 text-[11px] font-semibold text-gray-400 mb-3 uppercase tracking-wide">
+<span class="text-brand font-bold">Efficiency</span>
+<span class="inline-block w-1 h-1 bg-gray-300 rounded-full"></span>
+<span><i class="fa-regular fa-calendar mr-1"></i> June 23, 2025</span>
+</div>
+<h3 class="text-lg font-bold text-gray-900 mb-2 leading-snug group-hover:text-brand transition">Importance Of Surge Protection Systems</h3>
+<p class="text-gray-500 text-sm">Surge protection systems safeguard electronics from unexpected power surges.</p>
+<div class="mt-4">
+<a class="inline-flex items-center text-brand font-semibold text-xs hover:underline" href="#">Read More <i class="fa-solid fa-arrow-right ml-1 text-[10px]"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pre-Footer Contact -->
+<section class="py-20 bg-brand text-white" id="pre-footer">
+<div class="container mx-auto px-4 max-w-5xl flex flex-col md:flex-row justify-between items-center border-b border-white/20 pb-16">
+<div class="mb-8 md:mb-0">
+<p class="text-white/60 text-xs font-semibold mb-2 uppercase tracking-wider">Ready to work with us?</p>
+<h2 class="text-3xl md:text-4xl font-bold mb-4">info@pilotech.eu</h2>
+</div>
+<div class="text-right">
+<h2 class="text-4xl md:text-5xl font-bold mb-0">Get In Touch</h2>
+</div>
+</div>
+<div class="container mx-auto px-4 max-w-5xl pt-16 flex flex-col md:flex-row justify-between items-center">
+<p class="text-white/70 text-sm max-w-sm mb-6 md:mb-0 leading-relaxed">
+        Reliable electrical solutions for homes and businesses: safe, efficient, and expertly powered. Contact us today!
+      </p>
+<button class="bg-white hover:bg-gray-100 text-brand font-semibold py-3 px-8 rounded-lg transition duration-300 text-sm inline-flex items-center shadow-lg">
+<i class="fa-solid fa-paper-plane mr-2"></i> Contact Us
+      </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white" id="footer">
+<div class="border-b border-gray-800">
+<div class="container mx-auto px-4 lg:px-8 py-12">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<div class="mb-6 md:mb-0">
+<h3 class="text-2xl font-bold mb-2">Besoin d'un devis pour votre projet ?</h3>
+<p class="text-gray-400">Contactez-nous pour une étude personnalisée et gratuite.</p>
+</div>
+<a class="px-8 py-4 bg-brand hover:bg-brand-dark text-white font-bold rounded-md transition duration-300" href="gammes.html">Demander un Devis Gratuit</a>
+</div>
+</div>
+</div>
+<div class="container mx-auto px-4 lg:px-8 py-16">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div>
+<a class="text-2xl font-bold flex items-center space-x-2 mb-6" href="index.html">
+<span class="w-8 h-8 rounded-full bg-brand flex items-center justify-center text-white text-sm"><i class="fa-solid fa-wind"></i></span>
+<span class="text-white tracking-tight">Pilotech-VMI</span>
+</a>
+<p class="text-gray-400 text-sm mb-6 leading-relaxed">Spécialiste de la ventilation mécanique contrôlée (VMC/VMI) en Île-de-France. Installateur certifié.</p>
+<div class="flex space-x-4">
+<a class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brand hover:text-white transition" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+<a class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brand hover:text-white transition" href="#"><i class="fa-brands fa-instagram"></i></a>
+<a class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brand hover:text-white transition" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Nos gammes</h4>
+<ul class="space-y-3 text-sm text-gray-400 grid grid-cols-2">
+<li><a class="hover:text-brand transition" href="wally.html">Wally</a></li>
+<li><a class="hover:text-brand transition" href="lofty.html">Lofty</a></li>
+<li><a class="hover:text-brand transition" href="pro-1000.html">Pro 1000</a></li>
+<li><a class="hover:text-brand transition" href="cave.html">Cave</a></li>
+<li><a class="hover:text-brand transition" href="cube.html">Cube</a></li>
+<li><a class="hover:text-brand transition" href="urban-2.html">Urban 2</a></li>
+<li><a class="hover:text-brand transition" href="purevent.html">Purevent</a></li>
+<li><a class="hover:text-brand transition" href="gammes.html">Tout voir</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Entreprise</h4>
+<ul class="space-y-3 text-sm text-gray-400">
+<li><a class="hover:text-brand transition" href="a-propos.html">À Propos</a></li>
+<li><a class="hover:text-brand transition" href="index.html#realisations">Nos Réalisations</a></li>
+<li><a class="hover:text-brand transition" href="blog.html">Blog &amp; Actualités</a></li>
+<li><a class="hover:text-brand transition" href="index.html#contact">Contact</a></li>
+</ul>
+</div>
+<div id="contact">
+<h4 class="text-lg font-bold mb-6">Contact</h4>
+<ul class="space-y-4 text-sm text-gray-400">
+<li class="flex items-start">
+<i class="fa-solid fa-location-dot text-brand mt-1 mr-3"></i>
+<span>123 Avenue de la République<br/>75011 Paris, France</span>
+</li>
+<li class="flex items-center">
+<i class="fa-solid fa-phone text-brand mr-3"></i>
+<span>01 85 44 12 53</span>
+</li>
+<li class="flex items-center">
+<i class="fa-solid fa-envelope text-brand mr-3"></i>
+<span>info@pilotech.eu</span>
+</li>
+<li class="flex items-start">
+<i class="fa-solid fa-clock text-brand mr-3 mt-0.5"></i>
+<span>Lun – Ven : 8h00 – 18h00<br/>Sam : 9h00 – 13h00</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+<p>© 2026 Pilotech-VMI. Tous droits réservés.</p>
+<div class="flex space-x-4 mt-4 md:mt-0">
+<a class="hover:text-white transition" href="#">Mentions Légales</a>
+<a class="hover:text-white transition" href="#">Politique de Confidentialité</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileToggle.addEventListener('click', function () {
+      mobileMenu.classList.toggle('open');
+      const icon = mobileToggle.querySelector('i');
+      if (mobileMenu.classList.contains('open')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+      } else {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+    });
+  </script>
+</body>
+</html>
