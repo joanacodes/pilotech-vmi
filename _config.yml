@@ -1,0 +1,20 @@
+title: Pilotech-VMI
+description: Installation de VMC et ventilation par insufflation en Île-de-France
+url: https://pilotech-vmi.fr
+baseurl: ''
+lang: fr-FR
+timezone: Europe/Paris
+permalink: /blog/:title/
+markdown: kramdown
+future: false
+plugins:
+- jekyll-sitemap
+- jekyll-feed
+- jekyll-seo-tag
+exclude:
+- README.md
+- Gemfile
+- Gemfile.lock
+- vendor
+- .bundle
+- _site
