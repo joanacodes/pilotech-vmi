@@ -114,11 +114,7 @@
           solutions fiables et durables.
         </p>
 <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-<button class="px-8 py-3.5 bg-brand hover:bg-brand-dark text-white font-semibold rounded-md transition duration-300 w-full sm:w-auto">
-            Voir nos réalisations
-          </button><button class="px-8 py-3.5 bg-gray-900 hover:bg-gray-800 text-white font-semibold rounded-md transition duration-300 w-full sm:w-auto">
-            Découvrir nos VMC
-          </button></div>
+<a class="px-8 py-3.5 bg-brand hover:bg-brand-dark text-white font-semibold rounded-md transition duration-300 w-full sm:w-auto" href="index.html#realisations">Voir nos réalisations</a><a class="px-8 py-3.5 bg-gray-900 hover:bg-gray-800 text-white font-semibold rounded-md transition duration-300 w-full sm:w-auto" href="gammes.html">Découvrir nos VMC</a></div>
 </div>
 </section><!-- Hero Image -->
 <section class="w-full">
@@ -361,25 +357,25 @@
 <div class="border-b border-gray-100 pb-4"><button class="flex justify-between items-center w-full text-left font-bold text-gray-900 text-sm py-2">
                   Qu'est-ce qu'une VMC double flux et comment ça fonctionne ?
                   <i class="fa-solid fa-plus text-gray-400 text-xs"></i></button>
-</div>
+<div class="faq-answer overflow-hidden transition-all duration-300 ease-in-out" style="max-height:0px;"><p class="text-sm text-gray-600 leading-relaxed pt-1 pb-3 pr-8">La VMC double flux extrait l'air vicié des pièces humides (cuisine, salle de bain, WC) et insuffle de l'air neuf filtré dans les pièces de vie, en récupérant jusqu'à 90 % de la chaleur de l'air extrait grâce à un échangeur thermique. Résultat : un air intérieur renouvelé en continu, sans déperdition de chauffage.</p></div></div>
 <div class="border-b border-gray-100 pb-4"><button class="flex justify-between items-center w-full text-left font-bold text-gray-900 text-sm py-2">
                   Quels sont les signes d'une VMC défectueuse dans mon logement
                   ?
                   <i class="fa-solid fa-plus text-gray-400 text-xs"></i></button>
-</div>
+<div class="faq-answer overflow-hidden transition-all duration-300 ease-in-out" style="max-height:0px;"><p class="text-sm text-gray-600 leading-relaxed pt-1 pb-3 pr-8">Une VMC défectueuse se manifeste par plusieurs signes : bouches d'aération bruyantes ou silencieuses (signe d'un moteur à l'arrêt), condensation sur les fenêtres, moisissures dans la salle de bain, odeurs persistantes, ou sensation d'air confiné. Un professionnel peut mesurer le débit d'air pour confirmer le diagnostic.</p></div></div>
 <div class="border-b border-gray-100 pb-4"><button class="flex justify-between items-center w-full text-left font-bold text-gray-900 text-sm py-2">
                   Combien de temps dure une installation VMC ?
                   <i class="fa-solid fa-plus text-gray-400 text-xs"></i></button>
-</div>
+<div class="faq-answer overflow-hidden transition-all duration-300 ease-in-out" style="max-height:0px;"><p class="text-sm text-gray-600 leading-relaxed pt-1 pb-3 pr-8">Pour un logement standard, l'installation d'une VMC par insufflation prend généralement une demi-journée à une journée, sans gros œuvre. Une VMC double flux avec réseau de gaines complet peut nécessiter 1 à 3 jours selon la configuration du logement.</p></div></div>
 <div class="border-b border-gray-100 pb-4"><button class="flex justify-between items-center w-full text-left font-bold text-gray-900 text-sm py-2">
                   Quelles aides financières existent pour l'installation d'une
                   VMC ?
                   <i class="fa-solid fa-plus text-gray-400 text-xs"></i></button>
-</div>
+<div class="faq-answer overflow-hidden transition-all duration-300 ease-in-out" style="max-height:0px;"><p class="text-sm text-gray-600 leading-relaxed pt-1 pb-3 pr-8">Plusieurs dispositifs peuvent réduire le coût de votre installation : MaPrimeRénov', l'éco-prêt à taux zéro (éco-PTZ), les Certificats d'Économies d'Énergie (CEE) et, selon votre situation, des aides locales de l'Île-de-France. Nos équipes vous accompagnent dans le montage de votre dossier.</p></div></div>
 <div class="border-b border-gray-100 pb-4"><button class="flex justify-between items-center w-full text-left font-bold text-gray-900 text-sm py-2">
                   Comment entretenir ma VMC pour prolonger sa durée de vie ?
                   <i class="fa-solid fa-plus text-gray-400 text-xs"></i></button>
-</div>
+<div class="faq-answer overflow-hidden transition-all duration-300 ease-in-out" style="max-height:0px;"><p class="text-sm text-gray-600 leading-relaxed pt-1 pb-3 pr-8">Un entretien annuel est recommandé : nettoyage des bouches d'extraction et d'insufflation, vérification du moteur et remplacement des filtres. Un entretien régulier prolonge la durée de vie de votre VMC et garantit une qualité d'air optimale toute l'année.</p></div></div>
 </div>
 </div><!-- Contact Form -->
 <div class="w-full lg:w-1/2">
@@ -500,5 +496,25 @@
 </div>
 </div>
 </footer>
-</body>
+<script>
+(function() {
+  var buttons = document.querySelectorAll('#faq-contact .space-y-4 > div > button');
+  buttons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var answer = btn.parentElement.querySelector('.faq-answer');
+      var icon = btn.querySelector('i');
+      var isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+      if (isOpen) {
+        answer.style.maxHeight = '0px';
+        icon.classList.remove('fa-minus');
+        icon.classList.add('fa-plus');
+      } else {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        icon.classList.remove('fa-plus');
+        icon.classList.add('fa-minus');
+      }
+    });
+  });
+})();
+</script></body>
 </html>
