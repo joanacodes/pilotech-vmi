@@ -211,10 +211,38 @@
 <div class="container mx-auto px-4 lg:px-8">
 <div class="flex flex-col lg:flex-row items-center gap-14">
 <div class="lg:w-1/2">
-<div class="relative h-[420px] w-full rounded-2xl overflow-hidden shadow-lg">
-<div class="absolute inset-0 bg-brand/10 z-10"></div>
-<img alt="professional VMC ventilation technician" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<div class="relative h-[420px] w-full rounded-2xl overflow-hidden shadow-lg bg-white" id="vmi-slideshow">
+<a class="vmi-slide absolute inset-0 flex items-center justify-center p-10 pb-16 transition-opacity duration-1000 opacity-100" href="urban-2.html" aria-label="Découvrir la VMC Urban 2"><img alt="VMC Urban 2" class="max-w-full max-h-full object-contain rounded-xl" src="images/urban-2.png"/><span class="absolute left-6 bottom-6 px-4 py-1.5 bg-white/90 text-brand font-semibold text-sm rounded-full shadow">VMC Urban 2</span></a>
+<a class="vmi-slide absolute inset-0 flex items-center justify-center p-10 pb-16 transition-opacity duration-1000 opacity-0 pointer-events-none" href="purevent.html" aria-label="Découvrir la VMC Purevent"><img alt="VMC Purevent" class="max-w-full max-h-full object-contain rounded-xl" src="images/purevent.png" loading="lazy"/><span class="absolute left-6 bottom-6 px-4 py-1.5 bg-white/90 text-brand font-semibold text-sm rounded-full shadow">VMC Purevent</span></a>
+<a class="vmi-slide absolute inset-0 flex items-center justify-center p-10 pb-16 transition-opacity duration-1000 opacity-0 pointer-events-none" href="wally.html" aria-label="Découvrir la VMC Wally"><img alt="VMC Wally" class="max-w-full max-h-full object-contain rounded-xl" src="images/wally.webp" loading="lazy"/><span class="absolute left-6 bottom-6 px-4 py-1.5 bg-white/90 text-brand font-semibold text-sm rounded-full shadow">VMC Wally</span></a>
+<a class="vmi-slide absolute inset-0 flex items-center justify-center p-10 pb-16 transition-opacity duration-1000 opacity-0 pointer-events-none" href="lofty.html" aria-label="Découvrir la VMC Lofty"><img alt="VMC Lofty" class="max-w-full max-h-full object-contain rounded-xl" src="images/lofty.webp" loading="lazy"/><span class="absolute left-6 bottom-6 px-4 py-1.5 bg-white/90 text-brand font-semibold text-sm rounded-full shadow">VMC Lofty</span></a>
+<a class="vmi-slide absolute inset-0 flex items-center justify-center p-10 pb-16 transition-opacity duration-1000 opacity-0 pointer-events-none" href="pro-1000.html" aria-label="Découvrir la VMC Pro 1000"><img alt="VMC Pro 1000" class="max-w-full max-h-full object-contain rounded-xl" src="images/pro-1000.webp" loading="lazy"/><span class="absolute left-6 bottom-6 px-4 py-1.5 bg-white/90 text-brand font-semibold text-sm rounded-full shadow">VMC Pro 1000</span></a>
+<a class="vmi-slide absolute inset-0 flex items-center justify-center p-10 pb-16 transition-opacity duration-1000 opacity-0 pointer-events-none" href="cave.html" aria-label="Découvrir la VMC Cave"><img alt="VMC Cave" class="max-w-full max-h-full object-contain rounded-xl" src="images/cave.webp" loading="lazy"/><span class="absolute left-6 bottom-6 px-4 py-1.5 bg-white/90 text-brand font-semibold text-sm rounded-full shadow">VMC Cave</span></a>
+<a class="vmi-slide absolute inset-0 flex items-center justify-center p-10 pb-16 transition-opacity duration-1000 opacity-0 pointer-events-none" href="cube.html" aria-label="Découvrir la VMC Cube"><img alt="VMC Cube" class="max-w-full max-h-full object-contain rounded-xl" src="images/cube.png" loading="lazy"/><span class="absolute left-6 bottom-6 px-4 py-1.5 bg-white/90 text-brand font-semibold text-sm rounded-full shadow">VMC Cube</span></a>
+<div class="absolute right-6 bottom-7 flex space-x-2 z-10"><button aria-label="Voir la VMC Urban 2" class="vmi-dot w-2.5 h-2.5 rounded-full transition bg-brand" type="button"></button><button aria-label="Voir la VMC Purevent" class="vmi-dot w-2.5 h-2.5 rounded-full transition bg-gray-300" type="button"></button><button aria-label="Voir la VMC Wally" class="vmi-dot w-2.5 h-2.5 rounded-full transition bg-gray-300" type="button"></button><button aria-label="Voir la VMC Lofty" class="vmi-dot w-2.5 h-2.5 rounded-full transition bg-gray-300" type="button"></button><button aria-label="Voir la VMC Pro 1000" class="vmi-dot w-2.5 h-2.5 rounded-full transition bg-gray-300" type="button"></button><button aria-label="Voir la VMC Cave" class="vmi-dot w-2.5 h-2.5 rounded-full transition bg-gray-300" type="button"></button><button aria-label="Voir la VMC Cube" class="vmi-dot w-2.5 h-2.5 rounded-full transition bg-gray-300" type="button"></button></div>
 </div>
+<script>
+(function () {
+  var root = document.getElementById('vmi-slideshow');
+  var slides = root.querySelectorAll('.vmi-slide');
+  var dots = root.querySelectorAll('.vmi-dot');
+  var current = 0, timer;
+  function show(n) {
+    slides[current].classList.replace('opacity-100', 'opacity-0');
+    slides[current].classList.add('pointer-events-none');
+    dots[current].classList.replace('bg-brand', 'bg-gray-300');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.replace('opacity-0', 'opacity-100');
+    slides[current].classList.remove('pointer-events-none');
+    dots[current].classList.replace('bg-gray-300', 'bg-brand');
+  }
+  function start() { timer = setInterval(function () { show(current + 1); }, 3500); }
+  dots.forEach(function (dot, i) {
+    dot.addEventListener('click', function () { clearInterval(timer); show(i); start(); });
+  });
+  start();
+})();
+</script>
 </div>
 <div class="lg:w-1/2">
 <div class="inline-flex items-center space-x-2 text-brand font-semibold text-xs tracking-wider uppercase mb-4">
@@ -301,10 +329,9 @@
 </div>
 <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Un Processus Simple et Efficace</h2>
 <p class="text-gray-600 mb-8 leading-relaxed">De la demande de devis à la mise en service de votre VMC, nous vous accompagnons à chaque étape avec professionnalisme et transparence.</p>
-<a class="inline-block px-6 py-3 bg-brand hover:bg-brand-dark text-white font-semibold rounded-md transition duration-300 mb-10" href="#realisations">Voir Nos Réalisations</a>
 <div class="h-80 overflow-hidden rounded-xl shadow-lg relative">
 <div class="absolute inset-0 bg-brand/10 z-10 mix-blend-multiply"></div>
-<img alt="professional ventilation technician" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<img alt="Cliente détendue dans son salon grâce à une VMC Pilotech-VMI" class="w-full h-full object-cover" src="images/cliente-salon.webp"/>
 </div>
 </div>
 <div class="lg:w-1/2 relative">
@@ -417,7 +444,7 @@
 <!-- ===== EXCELLENCE SECTION ===== -->
 <section class="py-20 lg:py-32 bg-black text-white relative overflow-hidden" id="excellence">
 <div class="absolute right-0 top-0 w-full lg:w-1/2 h-full opacity-30 lg:opacity-100">
-<img alt="ventilation ductwork" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1621905252472-943afaa20e20?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<img alt="Technicien Pilotech-VMI avec son casque de chantier" class="w-full h-full object-cover object-top" src="images/technicien-pilotech.webp"/>
 <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent lg:via-black/20"></div>
 </div>
 <div class="container mx-auto px-4 lg:px-8 relative z-10">
